@@ -14,19 +14,20 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+ *//*
+
 
 package me.fengfshao.common.config.confdesign.flink;
 
-import org.apache.flink.annotation.PublicEvolving;
-import org.apache.flink.configuration.description.Description;
+
+import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.stream.Stream;
 
-import static org.apache.flink.util.Preconditions.checkNotNull;
 
+*/
 /**
  * A {@code ConfigOption} describes a configuration parameter. It encapsulates
  * the configuration key, deprecated older versions of the key, and an optional
@@ -36,33 +37,44 @@ import static org.apache.flink.util.Preconditions.checkNotNull;
  * Once created, a config option is immutable.
  *
  * @param <T> The type of value associated with the configuration option.
- */
+ *//*
+
 public class ConfigOption<T> {
 
 	private static final FallbackKey[] EMPTY = new FallbackKey[0];
 
 	// ------------------------------------------------------------------------
 
-	/** The current key for that config option. */
+	*/
+/** The current key for that config option. *//*
+
 	private final String key;
 
-	/** The list of deprecated keys, in the order to be checked. */
+	*/
+/** The list of deprecated keys, in the order to be checked. *//*
+
 	private final FallbackKey[] fallbackKeys;
 
-	/** The default value for this option. */
+	*/
+/** The default value for this option. *//*
+
 	private final T defaultValue;
 
-	/** The description for this option. */
+	*/
+/** The description for this option. *//*
+
 	private final Description description;
 
 	// ------------------------------------------------------------------------
 
-	/**
+	*/
+/**
 	 * Creates a new config option with no fallback keys.
 	 *
 	 * @param key The current key for that config option
 	 * @param defaultValue The default value for this option
-	 */
+	 *//*
+
 	ConfigOption(String key, T defaultValue) {
 		this.key = checkNotNull(key);
 		this.description = Description.builder().text("").build();
@@ -70,7 +82,8 @@ public class ConfigOption<T> {
 		this.fallbackKeys = EMPTY;
 	}
 
-	/**
+	*/
+/**
 	 * Creates a new config option with fallback keys.
 	 *
 	 * @param key The current key for that config option
@@ -78,7 +91,8 @@ public class ConfigOption<T> {
 	 * @param defaultValue The default value for this option
 	 * @param fallbackKeys The list of fallback keys, in the order to be checked
 	 * @deprecated use version with {@link Description} instead
-	 */
+	 *//*
+
 	@Deprecated
 	ConfigOption(String key, String description, T defaultValue, FallbackKey... fallbackKeys) {
 		this.key = checkNotNull(key);
@@ -87,14 +101,16 @@ public class ConfigOption<T> {
 		this.fallbackKeys = fallbackKeys == null || fallbackKeys.length == 0 ? EMPTY : fallbackKeys;
 	}
 
-	/**
+	*/
+/**
 	 * Creates a new config option with fallback keys.
 	 *
 	 * @param key The current key for that config option
 	 * @param description Description for that option
 	 * @param defaultValue The default value for this option
 	 * @param fallbackKeys The list of fallback keys, in the order to be checked
-	 */
+	 *//*
+
 	ConfigOption(String key, Description description, T defaultValue, FallbackKey... fallbackKeys) {
 		this.key = checkNotNull(key);
 		this.description = description;
@@ -104,7 +120,8 @@ public class ConfigOption<T> {
 
 	// ------------------------------------------------------------------------
 
-	/**
+	*/
+/**
 	 * Creates a new config option, using this option's key and default value, and
 	 * adding the given fallback keys.
 	 *
@@ -114,7 +131,8 @@ public class ConfigOption<T> {
 	 *
 	 * @param fallbackKeys The fallback keys, in the order in which they should be checked.
 	 * @return A new config options, with the given fallback keys.
-	 */
+	 *//*
+
 	public ConfigOption<T> withFallbackKeys(String... fallbackKeys) {
 		final Stream<FallbackKey> newFallbackKeys = Arrays.stream(fallbackKeys).map(FallbackKey::createFallbackKey);
 		final Stream<FallbackKey> currentAlternativeKeys = Arrays.stream(this.fallbackKeys);
@@ -125,7 +143,8 @@ public class ConfigOption<T> {
 		return new ConfigOption<>(key, description, defaultValue, mergedAlternativeKeys);
 	}
 
-	/**
+	*/
+/**
 	 * Creates a new config option, using this option's key and default value, and
 	 * adding the given deprecated keys.
 	 *
@@ -135,7 +154,8 @@ public class ConfigOption<T> {
 	 *
 	 * @param deprecatedKeys The deprecated keys, in the order in which they should be checked.
 	 * @return A new config options, with the given deprecated keys.
-	 */
+	 *//*
+
 	public ConfigOption<T> withDeprecatedKeys(String... deprecatedKeys) {
 		final Stream<FallbackKey> newDeprecatedKeys = Arrays.stream(deprecatedKeys).map(FallbackKey::createDeprecatedKey);
 		final Stream<FallbackKey> currentAlternativeKeys = Arrays.stream(this.fallbackKeys);
@@ -146,74 +166,90 @@ public class ConfigOption<T> {
 		return new ConfigOption<>(key, description, defaultValue, mergedAlternativeKeys);
 	}
 
-	/**
+	*/
+/**
 	 * Creates a new config option, using this option's key and default value, and
 	 * adding the given description. The given description is used when generation the configuration documention.
 	 *
 	 * @param description The description for this option.
 	 * @return A new config option, with given description.
-	 */
+	 *//*
+
 	public ConfigOption<T> withDescription(final String description) {
 		return withDescription(Description.builder().text(description).build());
 	}
 
-	/**
+	*/
+/**
 	 * Creates a new config option, using this option's key and default value, and
 	 * adding the given description. The given description is used when generation the configuration documention.
 	 *
 	 * @param description The description for this option.
 	 * @return A new config option, with given description.
-	 */
+	 *//*
+
 	public ConfigOption<T> withDescription(final Description description) {
 		return new ConfigOption<>(key, description, defaultValue, fallbackKeys);
 	}
 
 	// ------------------------------------------------------------------------
 
-	/**
+	*/
+/**
 	 * Gets the configuration key.
 	 * @return The configuration key
-	 */
+	 *//*
+
 	public String key() {
 		return key;
 	}
 
-	/**
+	*/
+/**
 	 * Checks if this option has a default value.
 	 * @return True if it has a default value, false if not.
-	 */
+	 *//*
+
 	public boolean hasDefaultValue() {
 		return defaultValue != null;
 	}
 
-	/**
+	*/
+/**
 	 * Returns the default value, or null, if there is no default value.
 	 * @return The default value, or null.
-	 */
+	 *//*
+
 	public T defaultValue() {
 		return defaultValue;
 	}
 
-	/**
+	*/
+/**
 	 * Checks whether this option has fallback keys.
 	 * @return True if the option has fallback keys, false if not.
-	 */
+	 *//*
+
 	public boolean hasFallbackKeys() {
 		return fallbackKeys != EMPTY;
 	}
 
-	/**
+	*/
+/**
 	 * Gets the fallback keys, in the order to be checked.
 	 * @return The option's fallback keys.
-	 */
+	 *//*
+
 	public Iterable<FallbackKey> fallbackKeys() {
 		return (fallbackKeys == EMPTY) ? Collections.emptyList() : Arrays.asList(fallbackKeys);
 	}
 
-	/**
+	*/
+/**
 	 * Returns the description of this option.
 	 * @return The option's description.
-	 */
+	 *//*
+
 	public Description description() {
 		return description;
 	}
@@ -250,3 +286,4 @@ public class ConfigOption<T> {
 				key, defaultValue, Arrays.toString(fallbackKeys));
 	}
 }
+*/

@@ -14,14 +14,14 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+ *//*
+
 
 package me.fengfshao.common.config.confdesign.flink;
+import static com.google.common.base.Preconditions.checkNotNull;
 
-import org.apache.flink.annotation.PublicEvolving;
 
-import static org.apache.flink.util.Preconditions.checkNotNull;
-
+*/
 /**
  * {@code ConfigOptions} are used to build a {@link ConfigOption}.
  * The option is typically built in one of the following pattern:
@@ -48,16 +48,18 @@ import static org.apache.flink.util.Preconditions.checkNotNull;
  *     .defaultValue(0.9).
  *     .withDeprecatedKeys("cpu.threshold");
  * }</pre>
- */
-@PublicEvolving
+ *//*
+
 public class ConfigOptions {
 
-	/**
+	*/
+/**
 	 * Starts building a new {@link ConfigOption}.
 	 *
 	 * @param key The key for the config option.
 	 * @return The builder for the config option with the given key.
-	 */
+	 *//*
+
 	public static OptionBuilder key(String key) {
 		checkNotNull(key);
 		return new OptionBuilder(key);
@@ -65,24 +67,31 @@ public class ConfigOptions {
 
 	// ------------------------------------------------------------------------
 
-	/**
+	*/
+/**
 	 * The option builder is used to create a {@link ConfigOption}.
 	 * It is instantiated via {@link ConfigOptions#key(String)}.
-	 */
+	 *//*
+
 	public static final class OptionBuilder {
 
-		/** The key for the config option. */
+		*/
+/** The key for the config option. *//*
+
 		private final String key;
 
-		/**
+		*/
+/**
 		 * Creates a new OptionBuilder.
 		 * @param key The key for the config option
-		 */
+		 *//*
+
 		OptionBuilder(String key) {
 			this.key = key;
 		}
 
-		/**
+		*/
+/**
 		 * Creates a ConfigOption with the given default value.
 		 *
 		 * <p>This method does not accept "null". For options with no default value, choose
@@ -91,19 +100,22 @@ public class ConfigOptions {
 		 * @param value The default value for the config option
 		 * @param <T> The type of the default value.
 		 * @return The config option with the default value.
-		 */
+		 *//*
+
 		public <T> ConfigOption<T> defaultValue(T value) {
 			checkNotNull(value);
 			return new ConfigOption<>(key, value);
 		}
 
-		/**
+		*/
+/**
 		 * Creates a string-valued option with no default value.
 		 * String-valued options are the only ones that can have no
 		 * default value.
 		 *
 		 * @return The created ConfigOption.
-		 */
+		 *//*
+
 		public ConfigOption<String> noDefaultValue() {
 			return new ConfigOption<>(key, null);
 		}
@@ -111,6 +123,9 @@ public class ConfigOptions {
 
 	// ------------------------------------------------------------------------
 
-	/** Not intended to be instantiated. */
+	*/
+/** Not intended to be instantiated. *//*
+
 	private ConfigOptions() {}
 }
+*/
