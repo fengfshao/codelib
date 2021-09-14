@@ -86,6 +86,26 @@
             <artifactId>jedis</artifactId>
             <version>3.6.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.17.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.os72</groupId>
+            <artifactId>protobuf-dynamic</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.protostuff/protostuff-parser -->
+        <dependency>
+            <groupId>io.protostuff</groupId>
+            <artifactId>protostuff-parser</artifactId>
+            <version>2.2.27</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -128,6 +148,32 @@
                     <jvmArgs>-Xss8M</jvmArgs>
                     <scalaVersion>${scala.version}</scalaVersion>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>com.github.igor-petruk.protobuf</groupId>
+                <artifactId>protobuf-maven-plugin</artifactId>
+                <version>0.6.5</version>
+                <configuration>
+                    <!--Setting to "true" disables version check between 'protoc' and the protobuf library used by module-->
+                    <ignoreVersions>false</ignoreVersions>
+                    <!--<inputDirectories>
+                        <inputDirectory>
+                            ${project.basedir}/${project.root.relativePath}/common-config/resource/protobuf3
+                        </inputDirectory>
+                    </inputDirectories>-->
+                    <protocCommand>/usr/local/bin/protoc3</protocCommand>
+                    <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                    <cleanOutputFolder>false</cleanOutputFolder>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>process-sources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
