@@ -22,4 +22,10 @@ object ParseYaml {
       .getResourceAsStream(filePath)
     mapper.readValue(fileStream, classOf[Map[String, Any]])
   }
+
+  def main(args: Array[String]): Unit = {
+    val s=List("aa","bb")
+    val pariList= for(str<-s) yield str->s.length.toString
+    val tmpMap: Map[String, String] =pariList.toMap
+  }
 }

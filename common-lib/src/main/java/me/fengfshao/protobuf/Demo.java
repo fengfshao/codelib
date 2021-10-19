@@ -15,6 +15,7 @@ import io.protostuff.compiler.parser.ClasspathFileReader;
 import io.protostuff.compiler.parser.Importer;
 import io.protostuff.compiler.parser.ProtoContext;
 import java.util.Arrays;
+import me.fengfshao.protobuf.pb3.DynamicProtoBuilder.ProtoHolder;
 import me.fengfshao.protobuf.pb3.PersonProto;
 
 /**

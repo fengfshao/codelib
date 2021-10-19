@@ -47,6 +47,31 @@ public final class PersonProto {
      */
     com.google.protobuf.ByteString
         getEmailBytes();
+
+    /**
+     * <code>repeated string address = 4;</code>
+     * @return A list containing the address.
+     */
+    java.util.List<java.lang.String>
+        getAddressList();
+    /**
+     * <code>repeated string address = 4;</code>
+     * @return The count of address.
+     */
+    int getAddressCount();
+    /**
+     * <code>repeated string address = 4;</code>
+     * @param index The index of the element to return.
+     * @return The address at the given index.
+     */
+    java.lang.String getAddress(int index);
+    /**
+     * <code>repeated string address = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the address at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes(int index);
   }
   /**
    * Protobuf type {@code Person}
@@ -63,6 +88,7 @@ public final class PersonProto {
     private Person() {
       name_ = "";
       email_ = "";
+      address_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -85,6 +111,7 @@ public final class PersonProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -112,6 +139,15 @@ public final class PersonProto {
               email_ = s;
               break;
             }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                address_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              address_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -127,6 +163,9 @@ public final class PersonProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          address_ = address_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -231,6 +270,41 @@ public final class PersonProto {
       }
     }
 
+    public static final int ADDRESS_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList address_;
+    /**
+     * <code>repeated string address = 4;</code>
+     * @return A list containing the address.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAddressList() {
+      return address_;
+    }
+    /**
+     * <code>repeated string address = 4;</code>
+     * @return The count of address.
+     */
+    public int getAddressCount() {
+      return address_.size();
+    }
+    /**
+     * <code>repeated string address = 4;</code>
+     * @param index The index of the element to return.
+     * @return The address at the given index.
+     */
+    public java.lang.String getAddress(int index) {
+      return address_.get(index);
+    }
+    /**
+     * <code>repeated string address = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the address at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAddressBytes(int index) {
+      return address_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -254,6 +328,9 @@ public final class PersonProto {
       if (!getEmailBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, email_);
       }
+      for (int i = 0; i < address_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, address_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -272,6 +349,14 @@ public final class PersonProto {
       }
       if (!getEmailBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, email_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < address_.size(); i++) {
+          dataSize += computeStringSizeNoTag(address_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAddressList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -294,6 +379,8 @@ public final class PersonProto {
           .equals(other.getName())) return false;
       if (!getEmail()
           .equals(other.getEmail())) return false;
+      if (!getAddressList()
+          .equals(other.getAddressList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -311,6 +398,10 @@ public final class PersonProto {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + EMAIL_FIELD_NUMBER;
       hash = (53 * hash) + getEmail().hashCode();
+      if (getAddressCount() > 0) {
+        hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getAddressList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -450,6 +541,8 @@ public final class PersonProto {
 
         email_ = "";
 
+        address_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -476,9 +569,15 @@ public final class PersonProto {
       @java.lang.Override
       public me.fengfshao.protobuf.pb3.PersonProto.Person buildPartial() {
         me.fengfshao.protobuf.pb3.PersonProto.Person result = new me.fengfshao.protobuf.pb3.PersonProto.Person(this);
+        int from_bitField0_ = bitField0_;
         result.id_ = id_;
         result.name_ = name_;
         result.email_ = email_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          address_ = address_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.address_ = address_;
         onBuilt();
         return result;
       }
@@ -538,6 +637,16 @@ public final class PersonProto {
           email_ = other.email_;
           onChanged();
         }
+        if (!other.address_.isEmpty()) {
+          if (address_.isEmpty()) {
+            address_ = other.address_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureAddressIsMutable();
+            address_.addAll(other.address_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -566,6 +675,7 @@ public final class PersonProto {
         }
         return this;
       }
+      private int bitField0_;
 
       private int id_ ;
       /**
@@ -749,6 +859,116 @@ public final class PersonProto {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.LazyStringList address_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureAddressIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          address_ = new com.google.protobuf.LazyStringArrayList(address_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string address = 4;</code>
+       * @return A list containing the address.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAddressList() {
+        return address_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string address = 4;</code>
+       * @return The count of address.
+       */
+      public int getAddressCount() {
+        return address_.size();
+      }
+      /**
+       * <code>repeated string address = 4;</code>
+       * @param index The index of the element to return.
+       * @return The address at the given index.
+       */
+      public java.lang.String getAddress(int index) {
+        return address_.get(index);
+      }
+      /**
+       * <code>repeated string address = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the address at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes(int index) {
+        return address_.getByteString(index);
+      }
+      /**
+       * <code>repeated string address = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAddressIsMutable();
+        address_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string address = 4;</code>
+       * @param value The address to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAddressIsMutable();
+        address_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string address = 4;</code>
+       * @param values The address to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAddress(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAddressIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, address_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string address = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string address = 4;</code>
+       * @param value The bytes of the address to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureAddressIsMutable();
+        address_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -816,9 +1036,10 @@ public final class PersonProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014person.proto\"1\n\006Person\022\n\n\002id\030\001 \001(\005\022\014\n\004" +
-      "name\030\002 \001(\t\022\r\n\005email\030\003 \001(\tB(\n\031me.fengfsha" +
-      "o.protobuf.pb3B\013PersonProtob\006proto3"
+      "\n\014person.proto\"B\n\006Person\022\n\n\002id\030\001 \001(\005\022\014\n\004" +
+      "name\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022\017\n\007address\030\004 \003" +
+      "(\tB(\n\031me.fengfshao.protobuf.pb3B\013PersonP" +
+      "rotob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -829,7 +1050,7 @@ public final class PersonProto {
     internal_static_Person_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Person_descriptor,
-        new java.lang.String[] { "Id", "Name", "Email", });
+        new java.lang.String[] { "Id", "Name", "Email", "Address", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
