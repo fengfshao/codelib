@@ -7,4 +7,21 @@ message Person {
   string name = 2;
   string email = 3;
   repeated string address = 4;
+  repeated string xxx = 5;
+  uint64 age =6;
+  string eid = 7; // 帖子类型，图文/视频/纯文字/转发 等
+  string scene_vid = 8; // 帖子内视频vid
+  string original_scene_status = 9; // 转发帖引用原帖的状态
+  string scene_content_type = 10; // 帖子内容类型
+  string scene_attitude = 11; // 态度
+  string scene_tag = 12; // 观点实体
+  repeated string scene_tag_list = 13; // 观点实体
+  string scene_img = 14; // 帖子内图片json信息(包含url、类型、长、宽)
+  string user_type = 15; // 帐号类型，0=普通用户;1=UGC;2=明星;3`=机构号;4=媒体号;5=企业号;6=政府号;7=大IP号;8=影视公司号;9=公益机构;10=社区权威号;11=社区优质号;12=社区达人号;13=社区外团号
+  string correlation_json = 16; // 帖子与话题&doki相关性
+  string ip_doki_correlation_json = 17; // 帖子与ipdoki相关性
+  uint64 like_num = 18; // 点赞数
+  uint64 comment_num = 19; // 评论数
+  string is_high_quality = 20; // 是否优质帖，1：人工优质；2：机器优质；3：否
+
 }

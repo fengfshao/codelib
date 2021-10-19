@@ -207,6 +207,8 @@ public class DynamicProtoBuilder {
         System.out.println("after email:" + p2.getEmail());
         System.out.println("after address:" + p2.getAddressList());
 
+
+
     }
 
 }

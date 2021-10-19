@@ -14,7 +14,13 @@ import io.protostuff.compiler.model.Message;
 import io.protostuff.compiler.parser.ClasspathFileReader;
 import io.protostuff.compiler.parser.Importer;
 import io.protostuff.compiler.parser.ProtoContext;
+
+import java.io.InputStream;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+import me.fengfshao.protobuf.pb3.DynamicProtoBuilder;
 import me.fengfshao.protobuf.pb3.DynamicProtoBuilder.ProtoHolder;
 import me.fengfshao.protobuf.pb3.PersonProto;
 
@@ -32,7 +38,7 @@ import me.fengfshao.protobuf.pb3.PersonProto;
 public class Demo {
 
     public static void main(String[] args) throws Exception {
-        parseFromProtoFile(args);
+        dynamicBuildDemo(args);
     }
 
     public static void buildAndDebuild(String[] args) throws InvalidProtocolBufferException {
@@ -78,7 +84,6 @@ public class Demo {
         Descriptor msgDesc = msgBuilder.getDescriptorForType();
         DynamicMessage msg = msgBuilder
                 .setField(msgDesc.findFieldByName("id"), 1)
-                .setField(msgDesc.findFieldByName("name"), "jihite")
                 .setField(msgDesc.findFieldByName("email"), "jihite@jihite.com")
                 .build();
 
@@ -86,11 +91,23 @@ public class Demo {
 
         PersonProto.Person.Builder builder = PersonProto.Person.newBuilder();
         builder.setId(1);
-        builder.setName("jihite");
         builder.setEmail("jihite@jihite.com");
         byte[] bytes2 = builder.build().toByteArray();
 
+        InputStream protoInputStream = Thread.currentThread().getContextClassLoader()
+                .getResource("person.proto").openStream();
+        ProtoHolder.registerProto(protoInputStream,"Person");
+
+        Map<String, Object> fieldValues = new HashMap<>();
+        fieldValues.put("id", 1);
+        fieldValues.put("email", "jihite@jihite.com");
+
+        DynamicMessage msg3= DynamicProtoBuilder.buildMessage("Person", fieldValues);
+        byte[] bytes3 = msg3.toByteArray();
+
         System.out.println(Arrays.equals(bytes1, bytes2));
+        System.out.println(Arrays.equals(bytes2, bytes3));
+
     }
 
 
