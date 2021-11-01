@@ -99,17 +99,394 @@ public final class PersonProto {
         getXxxBytes(int index);
 
     /**
-     * <code>uint64 age = 6;</code>
-     * @return The age.
+     * <pre>
+     *所属圈子id集合
+     * </pre>
+     *
+     * <code>repeated string dokiids_list = 6;</code>
+     * @return A list containing the dokiidsList.
      */
-    long getAge();
+    java.util.List<java.lang.String>
+        getDokiidsListList();
+    /**
+     * <pre>
+     *所属圈子id集合
+     * </pre>
+     *
+     * <code>repeated string dokiids_list = 6;</code>
+     * @return The count of dokiidsList.
+     */
+    int getDokiidsListCount();
+    /**
+     * <pre>
+     *所属圈子id集合
+     * </pre>
+     *
+     * <code>repeated string dokiids_list = 6;</code>
+     * @param index The index of the element to return.
+     * @return The dokiidsList at the given index.
+     */
+    java.lang.String getDokiidsList(int index);
+    /**
+     * <pre>
+     *所属圈子id集合
+     * </pre>
+     *
+     * <code>repeated string dokiids_list = 6;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the dokiidsList at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDokiidsListBytes(int index);
+
+    /**
+     * <pre>
+     *所属话题id集合
+     * </pre>
+     *
+     * <code>string topicids = 7;</code>
+     * @return The topicids.
+     */
+    java.lang.String getTopicids();
+    /**
+     * <pre>
+     *所属话题id集合
+     * </pre>
+     *
+     * <code>string topicids = 7;</code>
+     * @return The bytes for topicids.
+     */
+    com.google.protobuf.ByteString
+        getTopicidsBytes();
+
+    /**
+     * <pre>
+     *所属话题id集合
+     * </pre>
+     *
+     * <code>repeated string topicids_list = 8;</code>
+     * @return A list containing the topicidsList.
+     */
+    java.util.List<java.lang.String>
+        getTopicidsListList();
+    /**
+     * <pre>
+     *所属话题id集合
+     * </pre>
+     *
+     * <code>repeated string topicids_list = 8;</code>
+     * @return The count of topicidsList.
+     */
+    int getTopicidsListCount();
+    /**
+     * <pre>
+     *所属话题id集合
+     * </pre>
+     *
+     * <code>repeated string topicids_list = 8;</code>
+     * @param index The index of the element to return.
+     * @return The topicidsList at the given index.
+     */
+    java.lang.String getTopicidsList(int index);
+    /**
+     * <pre>
+     *所属话题id集合
+     * </pre>
+     *
+     * <code>repeated string topicids_list = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the topicidsList at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTopicidsListBytes(int index);
+
+    /**
+     * <pre>
+     *上游消息推送时间
+     * </pre>
+     *
+     * <code>uint64 push_timestamp = 9;</code>
+     * @return The pushTimestamp.
+     */
+    long getPushTimestamp();
+
+    /**
+     * <pre>
+     * 帖子状态
+     * </pre>
+     *
+     * <code>string scene_status = 10;</code>
+     * @return The sceneStatus.
+     */
+    java.lang.String getSceneStatus();
+    /**
+     * <pre>
+     * 帖子状态
+     * </pre>
+     *
+     * <code>string scene_status = 10;</code>
+     * @return The bytes for sceneStatus.
+     */
+    com.google.protobuf.ByteString
+        getSceneStatusBytes();
+
+    /**
+     * <pre>
+     * 数据版本，使用unix毫秒时间戳
+     * </pre>
+     *
+     * <code>uint64 data_version = 11;</code>
+     * @return The dataVersion.
+     */
+    long getDataVersion();
+
+    /**
+     * <pre>
+     * 实时流处理时间
+     * </pre>
+     *
+     * <code>uint64 modify_time = 12;</code>
+     * @return The modifyTime.
+     */
+    long getModifyTime();
+
+    /**
+     * <pre>
+     * 正排的时间戳
+     * </pre>
+     *
+     * <code>uint64 timestamp = 13;</code>
+     * @return The timestamp.
+     */
+    long getTimestamp();
+
+    /**
+     * <pre>
+     * 底层页发表时所属vid
+     * </pre>
+     *
+     * <code>string upload_under_vid = 14;</code>
+     * @return The uploadUnderVid.
+     */
+    java.lang.String getUploadUnderVid();
+    /**
+     * <pre>
+     * 底层页发表时所属vid
+     * </pre>
+     *
+     * <code>string upload_under_vid = 14;</code>
+     * @return The bytes for uploadUnderVid.
+     */
+    com.google.protobuf.ByteString
+        getUploadUnderVidBytes();
+
+    /**
+     * <pre>
+     * 底层页发表时所属cid
+     * </pre>
+     *
+     * <code>string upload_under_cid = 15;</code>
+     * @return The uploadUnderCid.
+     */
+    java.lang.String getUploadUnderCid();
+    /**
+     * <pre>
+     * 底层页发表时所属cid
+     * </pre>
+     *
+     * <code>string upload_under_cid = 15;</code>
+     * @return The bytes for uploadUnderCid.
+     */
+    com.google.protobuf.ByteString
+        getUploadUnderCidBytes();
+
+    /**
+     * <pre>
+     * 底层页发表时所属lid
+     * </pre>
+     *
+     * <code>string upload_under_lid = 16;</code>
+     * @return The uploadUnderLid.
+     */
+    java.lang.String getUploadUnderLid();
+    /**
+     * <pre>
+     * 底层页发表时所属lid
+     * </pre>
+     *
+     * <code>string upload_under_lid = 16;</code>
+     * @return The bytes for uploadUnderLid.
+     */
+    com.google.protobuf.ByteString
+        getUploadUnderLidBytes();
+
+    /**
+     * <pre>
+     * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+     * </pre>
+     *
+     * <code>string feed_type = 17;</code>
+     * @return The feedType.
+     */
+    java.lang.String getFeedType();
+    /**
+     * <pre>
+     * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+     * </pre>
+     *
+     * <code>string feed_type = 17;</code>
+     * @return The bytes for feedType.
+     */
+    com.google.protobuf.ByteString
+        getFeedTypeBytes();
+
+    /**
+     * <pre>
+     * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+     * </pre>
+     *
+     * <code>repeated string feed_type_list = 18;</code>
+     * @return A list containing the feedTypeList.
+     */
+    java.util.List<java.lang.String>
+        getFeedTypeListList();
+    /**
+     * <pre>
+     * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+     * </pre>
+     *
+     * <code>repeated string feed_type_list = 18;</code>
+     * @return The count of feedTypeList.
+     */
+    int getFeedTypeListCount();
+    /**
+     * <pre>
+     * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+     * </pre>
+     *
+     * <code>repeated string feed_type_list = 18;</code>
+     * @param index The index of the element to return.
+     * @return The feedTypeList at the given index.
+     */
+    java.lang.String getFeedTypeList(int index);
+    /**
+     * <pre>
+     * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+     * </pre>
+     *
+     * <code>repeated string feed_type_list = 18;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the feedTypeList at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFeedTypeListBytes(int index);
+
+    /**
+     * <pre>
+     * 转发帖引用原帖的feedid
+     * </pre>
+     *
+     * <code>string original_feedid = 19;</code>
+     * @return The originalFeedid.
+     */
+    java.lang.String getOriginalFeedid();
+    /**
+     * <pre>
+     * 转发帖引用原帖的feedid
+     * </pre>
+     *
+     * <code>string original_feedid = 19;</code>
+     * @return The bytes for originalFeedid.
+     */
+    com.google.protobuf.ByteString
+        getOriginalFeedidBytes();
+
+    /**
+     * <pre>
+     * 帖子正文
+     * </pre>
+     *
+     * <code>string feed_text = 20;</code>
+     * @return The feedText.
+     */
+    java.lang.String getFeedText();
+    /**
+     * <pre>
+     * 帖子正文
+     * </pre>
+     *
+     * <code>string feed_text = 20;</code>
+     * @return The bytes for feedText.
+     */
+    com.google.protobuf.ByteString
+        getFeedTextBytes();
+
+    /**
+     * <pre>
+     * 发布账号
+     * </pre>
+     *
+     * <code>string vuid = 21;</code>
+     * @return The vuid.
+     */
+    java.lang.String getVuid();
+    /**
+     * <pre>
+     * 发布账号
+     * </pre>
+     *
+     * <code>string vuid = 21;</code>
+     * @return The bytes for vuid.
+     */
+    com.google.protobuf.ByteString
+        getVuidBytes();
+
+    /**
+     * <pre>
+     * 发布时间,毫秒级时间戳（1614829859000）
+     * </pre>
+     *
+     * <code>uint64 scene_upload_time = 22;</code>
+     * @return The sceneUploadTime.
+     */
+    long getSceneUploadTime();
+
+    /**
+     * <pre>
+     * 标准化状态
+     * </pre>
+     *
+     * <code>string scene_is_normalized = 23;</code>
+     * @return The sceneIsNormalized.
+     */
+    java.lang.String getSceneIsNormalized();
+    /**
+     * <pre>
+     * 标准化状态
+     * </pre>
+     *
+     * <code>string scene_is_normalized = 23;</code>
+     * @return The bytes for sceneIsNormalized.
+     */
+    com.google.protobuf.ByteString
+        getSceneIsNormalizedBytes();
+
+    /**
+     * <pre>
+     * 更新时间,ms
+     * </pre>
+     *
+     * <code>uint64 scene_updata_time = 24;</code>
+     * @return The sceneUpdataTime.
+     */
+    long getSceneUpdataTime();
 
     /**
      * <pre>
      * 帖子类型，图文/视频/纯文字/转发 等
      * </pre>
      *
-     * <code>string eid = 7;</code>
+     * <code>string eid = 25;</code>
      * @return The eid.
      */
     java.lang.String getEid();
@@ -118,272 +495,11 @@ public final class PersonProto {
      * 帖子类型，图文/视频/纯文字/转发 等
      * </pre>
      *
-     * <code>string eid = 7;</code>
+     * <code>string eid = 25;</code>
      * @return The bytes for eid.
      */
     com.google.protobuf.ByteString
         getEidBytes();
-
-    /**
-     * <pre>
-     * 帖子内视频vid
-     * </pre>
-     *
-     * <code>string scene_vid = 8;</code>
-     * @return The sceneVid.
-     */
-    java.lang.String getSceneVid();
-    /**
-     * <pre>
-     * 帖子内视频vid
-     * </pre>
-     *
-     * <code>string scene_vid = 8;</code>
-     * @return The bytes for sceneVid.
-     */
-    com.google.protobuf.ByteString
-        getSceneVidBytes();
-
-    /**
-     * <pre>
-     * 转发帖引用原帖的状态
-     * </pre>
-     *
-     * <code>string original_scene_status = 9;</code>
-     * @return The originalSceneStatus.
-     */
-    java.lang.String getOriginalSceneStatus();
-    /**
-     * <pre>
-     * 转发帖引用原帖的状态
-     * </pre>
-     *
-     * <code>string original_scene_status = 9;</code>
-     * @return The bytes for originalSceneStatus.
-     */
-    com.google.protobuf.ByteString
-        getOriginalSceneStatusBytes();
-
-    /**
-     * <pre>
-     * 帖子内容类型
-     * </pre>
-     *
-     * <code>string scene_content_type = 10;</code>
-     * @return The sceneContentType.
-     */
-    java.lang.String getSceneContentType();
-    /**
-     * <pre>
-     * 帖子内容类型
-     * </pre>
-     *
-     * <code>string scene_content_type = 10;</code>
-     * @return The bytes for sceneContentType.
-     */
-    com.google.protobuf.ByteString
-        getSceneContentTypeBytes();
-
-    /**
-     * <pre>
-     * 态度
-     * </pre>
-     *
-     * <code>string scene_attitude = 11;</code>
-     * @return The sceneAttitude.
-     */
-    java.lang.String getSceneAttitude();
-    /**
-     * <pre>
-     * 态度
-     * </pre>
-     *
-     * <code>string scene_attitude = 11;</code>
-     * @return The bytes for sceneAttitude.
-     */
-    com.google.protobuf.ByteString
-        getSceneAttitudeBytes();
-
-    /**
-     * <pre>
-     * 观点实体
-     * </pre>
-     *
-     * <code>string scene_tag = 12;</code>
-     * @return The sceneTag.
-     */
-    java.lang.String getSceneTag();
-    /**
-     * <pre>
-     * 观点实体
-     * </pre>
-     *
-     * <code>string scene_tag = 12;</code>
-     * @return The bytes for sceneTag.
-     */
-    com.google.protobuf.ByteString
-        getSceneTagBytes();
-
-    /**
-     * <pre>
-     * 观点实体
-     * </pre>
-     *
-     * <code>repeated string scene_tag_list = 13;</code>
-     * @return A list containing the sceneTagList.
-     */
-    java.util.List<java.lang.String>
-        getSceneTagListList();
-    /**
-     * <pre>
-     * 观点实体
-     * </pre>
-     *
-     * <code>repeated string scene_tag_list = 13;</code>
-     * @return The count of sceneTagList.
-     */
-    int getSceneTagListCount();
-    /**
-     * <pre>
-     * 观点实体
-     * </pre>
-     *
-     * <code>repeated string scene_tag_list = 13;</code>
-     * @param index The index of the element to return.
-     * @return The sceneTagList at the given index.
-     */
-    java.lang.String getSceneTagList(int index);
-    /**
-     * <pre>
-     * 观点实体
-     * </pre>
-     *
-     * <code>repeated string scene_tag_list = 13;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the sceneTagList at the given index.
-     */
-    com.google.protobuf.ByteString
-        getSceneTagListBytes(int index);
-
-    /**
-     * <pre>
-     * 帖子内图片json信息(包含url、类型、长、宽)
-     * </pre>
-     *
-     * <code>string scene_img = 14;</code>
-     * @return The sceneImg.
-     */
-    java.lang.String getSceneImg();
-    /**
-     * <pre>
-     * 帖子内图片json信息(包含url、类型、长、宽)
-     * </pre>
-     *
-     * <code>string scene_img = 14;</code>
-     * @return The bytes for sceneImg.
-     */
-    com.google.protobuf.ByteString
-        getSceneImgBytes();
-
-    /**
-     * <pre>
-     * 帐号类型，0=普通用户;1=UGC;2=明星;3`=机构号;4=媒体号;5=企业号;6=政府号;7=大IP号;8=影视公司号;9=公益机构;10=社区权威号;11=社区优质号;12=社区达人号;13=社区外团号
-     * </pre>
-     *
-     * <code>string user_type = 15;</code>
-     * @return The userType.
-     */
-    java.lang.String getUserType();
-    /**
-     * <pre>
-     * 帐号类型，0=普通用户;1=UGC;2=明星;3`=机构号;4=媒体号;5=企业号;6=政府号;7=大IP号;8=影视公司号;9=公益机构;10=社区权威号;11=社区优质号;12=社区达人号;13=社区外团号
-     * </pre>
-     *
-     * <code>string user_type = 15;</code>
-     * @return The bytes for userType.
-     */
-    com.google.protobuf.ByteString
-        getUserTypeBytes();
-
-    /**
-     * <pre>
-     * 帖子与话题&amp;doki相关性
-     * </pre>
-     *
-     * <code>string correlation_json = 16;</code>
-     * @return The correlationJson.
-     */
-    java.lang.String getCorrelationJson();
-    /**
-     * <pre>
-     * 帖子与话题&amp;doki相关性
-     * </pre>
-     *
-     * <code>string correlation_json = 16;</code>
-     * @return The bytes for correlationJson.
-     */
-    com.google.protobuf.ByteString
-        getCorrelationJsonBytes();
-
-    /**
-     * <pre>
-     * 帖子与ipdoki相关性
-     * </pre>
-     *
-     * <code>string ip_doki_correlation_json = 17;</code>
-     * @return The ipDokiCorrelationJson.
-     */
-    java.lang.String getIpDokiCorrelationJson();
-    /**
-     * <pre>
-     * 帖子与ipdoki相关性
-     * </pre>
-     *
-     * <code>string ip_doki_correlation_json = 17;</code>
-     * @return The bytes for ipDokiCorrelationJson.
-     */
-    com.google.protobuf.ByteString
-        getIpDokiCorrelationJsonBytes();
-
-    /**
-     * <pre>
-     * 点赞数
-     * </pre>
-     *
-     * <code>uint64 like_num = 18;</code>
-     * @return The likeNum.
-     */
-    long getLikeNum();
-
-    /**
-     * <pre>
-     * 评论数
-     * </pre>
-     *
-     * <code>uint64 comment_num = 19;</code>
-     * @return The commentNum.
-     */
-    long getCommentNum();
-
-    /**
-     * <pre>
-     * 是否优质帖，1：人工优质；2：机器优质；3：否
-     * </pre>
-     *
-     * <code>string is_high_quality = 20;</code>
-     * @return The isHighQuality.
-     */
-    java.lang.String getIsHighQuality();
-    /**
-     * <pre>
-     * 是否优质帖，1：人工优质；2：机器优质；3：否
-     * </pre>
-     *
-     * <code>string is_high_quality = 20;</code>
-     * @return The bytes for isHighQuality.
-     */
-    com.google.protobuf.ByteString
-        getIsHighQualityBytes();
   }
   /**
    * Protobuf type {@code Person}
@@ -402,18 +518,20 @@ public final class PersonProto {
       email_ = "";
       address_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       xxx_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      dokiidsList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      topicids_ = "";
+      topicidsList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      sceneStatus_ = "";
+      uploadUnderVid_ = "";
+      uploadUnderCid_ = "";
+      uploadUnderLid_ = "";
+      feedType_ = "";
+      feedTypeList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      originalFeedid_ = "";
+      feedText_ = "";
+      vuid_ = "";
+      sceneIsNormalized_ = "";
       eid_ = "";
-      sceneVid_ = "";
-      originalSceneStatus_ = "";
-      sceneContentType_ = "";
-      sceneAttitude_ = "";
-      sceneTag_ = "";
-      sceneTagList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      sceneImg_ = "";
-      userType_ = "";
-      correlationJson_ = "";
-      ipDokiCorrelationJson_ = "";
-      isHighQuality_ = "";
     }
 
     @java.lang.Override
@@ -482,94 +600,127 @@ public final class PersonProto {
               xxx_.add(s);
               break;
             }
-            case 48: {
-
-              age_ = input.readUInt64();
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                dokiidsList_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              dokiidsList_.add(s);
               break;
             }
             case 58: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              eid_ = s;
+              topicids_ = s;
               break;
             }
             case 66: {
               java.lang.String s = input.readStringRequireUtf8();
-
-              sceneVid_ = s;
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                topicidsList_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              topicidsList_.add(s);
               break;
             }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 72: {
 
-              originalSceneStatus_ = s;
+              pushTimestamp_ = input.readUInt64();
               break;
             }
             case 82: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              sceneContentType_ = s;
+              sceneStatus_ = s;
               break;
             }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 88: {
 
-              sceneAttitude_ = s;
+              dataVersion_ = input.readUInt64();
               break;
             }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 96: {
 
-              sceneTag_ = s;
+              modifyTime_ = input.readUInt64();
               break;
             }
-            case 106: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                sceneTagList_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              sceneTagList_.add(s);
+            case 104: {
+
+              timestamp_ = input.readUInt64();
               break;
             }
             case 114: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              sceneImg_ = s;
+              uploadUnderVid_ = s;
               break;
             }
             case 122: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              userType_ = s;
+              uploadUnderCid_ = s;
               break;
             }
             case 130: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              correlationJson_ = s;
+              uploadUnderLid_ = s;
               break;
             }
             case 138: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              ipDokiCorrelationJson_ = s;
+              feedType_ = s;
               break;
             }
-            case 144: {
-
-              likeNum_ = input.readUInt64();
+            case 146: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                feedTypeList_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              feedTypeList_.add(s);
               break;
             }
-            case 152: {
+            case 154: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              commentNum_ = input.readUInt64();
+              originalFeedid_ = s;
               break;
             }
             case 162: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              isHighQuality_ = s;
+              feedText_ = s;
+              break;
+            }
+            case 170: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              vuid_ = s;
+              break;
+            }
+            case 176: {
+
+              sceneUploadTime_ = input.readUInt64();
+              break;
+            }
+            case 186: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sceneIsNormalized_ = s;
+              break;
+            }
+            case 192: {
+
+              sceneUpdataTime_ = input.readUInt64();
+              break;
+            }
+            case 202: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              eid_ = s;
               break;
             }
             default: {
@@ -594,7 +745,13 @@ public final class PersonProto {
           xxx_ = xxx_.getUnmodifiableView();
         }
         if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          sceneTagList_ = sceneTagList_.getUnmodifiableView();
+          dokiidsList_ = dokiidsList_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          topicidsList_ = topicidsList_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          feedTypeList_ = feedTypeList_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -770,25 +927,717 @@ public final class PersonProto {
       return xxx_.getByteString(index);
     }
 
-    public static final int AGE_FIELD_NUMBER = 6;
-    private long age_;
+    public static final int DOKIIDS_LIST_FIELD_NUMBER = 6;
+    private com.google.protobuf.LazyStringList dokiidsList_;
     /**
-     * <code>uint64 age = 6;</code>
-     * @return The age.
+     * <pre>
+     *所属圈子id集合
+     * </pre>
+     *
+     * <code>repeated string dokiids_list = 6;</code>
+     * @return A list containing the dokiidsList.
      */
-    @java.lang.Override
-    public long getAge() {
-      return age_;
+    public com.google.protobuf.ProtocolStringList
+        getDokiidsListList() {
+      return dokiidsList_;
+    }
+    /**
+     * <pre>
+     *所属圈子id集合
+     * </pre>
+     *
+     * <code>repeated string dokiids_list = 6;</code>
+     * @return The count of dokiidsList.
+     */
+    public int getDokiidsListCount() {
+      return dokiidsList_.size();
+    }
+    /**
+     * <pre>
+     *所属圈子id集合
+     * </pre>
+     *
+     * <code>repeated string dokiids_list = 6;</code>
+     * @param index The index of the element to return.
+     * @return The dokiidsList at the given index.
+     */
+    public java.lang.String getDokiidsList(int index) {
+      return dokiidsList_.get(index);
+    }
+    /**
+     * <pre>
+     *所属圈子id集合
+     * </pre>
+     *
+     * <code>repeated string dokiids_list = 6;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the dokiidsList at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDokiidsListBytes(int index) {
+      return dokiidsList_.getByteString(index);
     }
 
-    public static final int EID_FIELD_NUMBER = 7;
+    public static final int TOPICIDS_FIELD_NUMBER = 7;
+    private volatile java.lang.Object topicids_;
+    /**
+     * <pre>
+     *所属话题id集合
+     * </pre>
+     *
+     * <code>string topicids = 7;</code>
+     * @return The topicids.
+     */
+    @java.lang.Override
+    public java.lang.String getTopicids() {
+      java.lang.Object ref = topicids_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        topicids_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *所属话题id集合
+     * </pre>
+     *
+     * <code>string topicids = 7;</code>
+     * @return The bytes for topicids.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTopicidsBytes() {
+      java.lang.Object ref = topicids_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        topicids_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOPICIDS_LIST_FIELD_NUMBER = 8;
+    private com.google.protobuf.LazyStringList topicidsList_;
+    /**
+     * <pre>
+     *所属话题id集合
+     * </pre>
+     *
+     * <code>repeated string topicids_list = 8;</code>
+     * @return A list containing the topicidsList.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTopicidsListList() {
+      return topicidsList_;
+    }
+    /**
+     * <pre>
+     *所属话题id集合
+     * </pre>
+     *
+     * <code>repeated string topicids_list = 8;</code>
+     * @return The count of topicidsList.
+     */
+    public int getTopicidsListCount() {
+      return topicidsList_.size();
+    }
+    /**
+     * <pre>
+     *所属话题id集合
+     * </pre>
+     *
+     * <code>repeated string topicids_list = 8;</code>
+     * @param index The index of the element to return.
+     * @return The topicidsList at the given index.
+     */
+    public java.lang.String getTopicidsList(int index) {
+      return topicidsList_.get(index);
+    }
+    /**
+     * <pre>
+     *所属话题id集合
+     * </pre>
+     *
+     * <code>repeated string topicids_list = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the topicidsList at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTopicidsListBytes(int index) {
+      return topicidsList_.getByteString(index);
+    }
+
+    public static final int PUSH_TIMESTAMP_FIELD_NUMBER = 9;
+    private long pushTimestamp_;
+    /**
+     * <pre>
+     *上游消息推送时间
+     * </pre>
+     *
+     * <code>uint64 push_timestamp = 9;</code>
+     * @return The pushTimestamp.
+     */
+    @java.lang.Override
+    public long getPushTimestamp() {
+      return pushTimestamp_;
+    }
+
+    public static final int SCENE_STATUS_FIELD_NUMBER = 10;
+    private volatile java.lang.Object sceneStatus_;
+    /**
+     * <pre>
+     * 帖子状态
+     * </pre>
+     *
+     * <code>string scene_status = 10;</code>
+     * @return The sceneStatus.
+     */
+    @java.lang.Override
+    public java.lang.String getSceneStatus() {
+      java.lang.Object ref = sceneStatus_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sceneStatus_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 帖子状态
+     * </pre>
+     *
+     * <code>string scene_status = 10;</code>
+     * @return The bytes for sceneStatus.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSceneStatusBytes() {
+      java.lang.Object ref = sceneStatus_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sceneStatus_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_VERSION_FIELD_NUMBER = 11;
+    private long dataVersion_;
+    /**
+     * <pre>
+     * 数据版本，使用unix毫秒时间戳
+     * </pre>
+     *
+     * <code>uint64 data_version = 11;</code>
+     * @return The dataVersion.
+     */
+    @java.lang.Override
+    public long getDataVersion() {
+      return dataVersion_;
+    }
+
+    public static final int MODIFY_TIME_FIELD_NUMBER = 12;
+    private long modifyTime_;
+    /**
+     * <pre>
+     * 实时流处理时间
+     * </pre>
+     *
+     * <code>uint64 modify_time = 12;</code>
+     * @return The modifyTime.
+     */
+    @java.lang.Override
+    public long getModifyTime() {
+      return modifyTime_;
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 13;
+    private long timestamp_;
+    /**
+     * <pre>
+     * 正排的时间戳
+     * </pre>
+     *
+     * <code>uint64 timestamp = 13;</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public long getTimestamp() {
+      return timestamp_;
+    }
+
+    public static final int UPLOAD_UNDER_VID_FIELD_NUMBER = 14;
+    private volatile java.lang.Object uploadUnderVid_;
+    /**
+     * <pre>
+     * 底层页发表时所属vid
+     * </pre>
+     *
+     * <code>string upload_under_vid = 14;</code>
+     * @return The uploadUnderVid.
+     */
+    @java.lang.Override
+    public java.lang.String getUploadUnderVid() {
+      java.lang.Object ref = uploadUnderVid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uploadUnderVid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 底层页发表时所属vid
+     * </pre>
+     *
+     * <code>string upload_under_vid = 14;</code>
+     * @return The bytes for uploadUnderVid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUploadUnderVidBytes() {
+      java.lang.Object ref = uploadUnderVid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uploadUnderVid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPLOAD_UNDER_CID_FIELD_NUMBER = 15;
+    private volatile java.lang.Object uploadUnderCid_;
+    /**
+     * <pre>
+     * 底层页发表时所属cid
+     * </pre>
+     *
+     * <code>string upload_under_cid = 15;</code>
+     * @return The uploadUnderCid.
+     */
+    @java.lang.Override
+    public java.lang.String getUploadUnderCid() {
+      java.lang.Object ref = uploadUnderCid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uploadUnderCid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 底层页发表时所属cid
+     * </pre>
+     *
+     * <code>string upload_under_cid = 15;</code>
+     * @return The bytes for uploadUnderCid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUploadUnderCidBytes() {
+      java.lang.Object ref = uploadUnderCid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uploadUnderCid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPLOAD_UNDER_LID_FIELD_NUMBER = 16;
+    private volatile java.lang.Object uploadUnderLid_;
+    /**
+     * <pre>
+     * 底层页发表时所属lid
+     * </pre>
+     *
+     * <code>string upload_under_lid = 16;</code>
+     * @return The uploadUnderLid.
+     */
+    @java.lang.Override
+    public java.lang.String getUploadUnderLid() {
+      java.lang.Object ref = uploadUnderLid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uploadUnderLid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 底层页发表时所属lid
+     * </pre>
+     *
+     * <code>string upload_under_lid = 16;</code>
+     * @return The bytes for uploadUnderLid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUploadUnderLidBytes() {
+      java.lang.Object ref = uploadUnderLid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uploadUnderLid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEED_TYPE_FIELD_NUMBER = 17;
+    private volatile java.lang.Object feedType_;
+    /**
+     * <pre>
+     * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+     * </pre>
+     *
+     * <code>string feed_type = 17;</code>
+     * @return The feedType.
+     */
+    @java.lang.Override
+    public java.lang.String getFeedType() {
+      java.lang.Object ref = feedType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feedType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+     * </pre>
+     *
+     * <code>string feed_type = 17;</code>
+     * @return The bytes for feedType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeedTypeBytes() {
+      java.lang.Object ref = feedType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feedType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEED_TYPE_LIST_FIELD_NUMBER = 18;
+    private com.google.protobuf.LazyStringList feedTypeList_;
+    /**
+     * <pre>
+     * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+     * </pre>
+     *
+     * <code>repeated string feed_type_list = 18;</code>
+     * @return A list containing the feedTypeList.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFeedTypeListList() {
+      return feedTypeList_;
+    }
+    /**
+     * <pre>
+     * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+     * </pre>
+     *
+     * <code>repeated string feed_type_list = 18;</code>
+     * @return The count of feedTypeList.
+     */
+    public int getFeedTypeListCount() {
+      return feedTypeList_.size();
+    }
+    /**
+     * <pre>
+     * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+     * </pre>
+     *
+     * <code>repeated string feed_type_list = 18;</code>
+     * @param index The index of the element to return.
+     * @return The feedTypeList at the given index.
+     */
+    public java.lang.String getFeedTypeList(int index) {
+      return feedTypeList_.get(index);
+    }
+    /**
+     * <pre>
+     * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+     * </pre>
+     *
+     * <code>repeated string feed_type_list = 18;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the feedTypeList at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFeedTypeListBytes(int index) {
+      return feedTypeList_.getByteString(index);
+    }
+
+    public static final int ORIGINAL_FEEDID_FIELD_NUMBER = 19;
+    private volatile java.lang.Object originalFeedid_;
+    /**
+     * <pre>
+     * 转发帖引用原帖的feedid
+     * </pre>
+     *
+     * <code>string original_feedid = 19;</code>
+     * @return The originalFeedid.
+     */
+    @java.lang.Override
+    public java.lang.String getOriginalFeedid() {
+      java.lang.Object ref = originalFeedid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        originalFeedid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 转发帖引用原帖的feedid
+     * </pre>
+     *
+     * <code>string original_feedid = 19;</code>
+     * @return The bytes for originalFeedid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOriginalFeedidBytes() {
+      java.lang.Object ref = originalFeedid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        originalFeedid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEED_TEXT_FIELD_NUMBER = 20;
+    private volatile java.lang.Object feedText_;
+    /**
+     * <pre>
+     * 帖子正文
+     * </pre>
+     *
+     * <code>string feed_text = 20;</code>
+     * @return The feedText.
+     */
+    @java.lang.Override
+    public java.lang.String getFeedText() {
+      java.lang.Object ref = feedText_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feedText_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 帖子正文
+     * </pre>
+     *
+     * <code>string feed_text = 20;</code>
+     * @return The bytes for feedText.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeedTextBytes() {
+      java.lang.Object ref = feedText_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feedText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VUID_FIELD_NUMBER = 21;
+    private volatile java.lang.Object vuid_;
+    /**
+     * <pre>
+     * 发布账号
+     * </pre>
+     *
+     * <code>string vuid = 21;</code>
+     * @return The vuid.
+     */
+    @java.lang.Override
+    public java.lang.String getVuid() {
+      java.lang.Object ref = vuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        vuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 发布账号
+     * </pre>
+     *
+     * <code>string vuid = 21;</code>
+     * @return The bytes for vuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVuidBytes() {
+      java.lang.Object ref = vuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCENE_UPLOAD_TIME_FIELD_NUMBER = 22;
+    private long sceneUploadTime_;
+    /**
+     * <pre>
+     * 发布时间,毫秒级时间戳（1614829859000）
+     * </pre>
+     *
+     * <code>uint64 scene_upload_time = 22;</code>
+     * @return The sceneUploadTime.
+     */
+    @java.lang.Override
+    public long getSceneUploadTime() {
+      return sceneUploadTime_;
+    }
+
+    public static final int SCENE_IS_NORMALIZED_FIELD_NUMBER = 23;
+    private volatile java.lang.Object sceneIsNormalized_;
+    /**
+     * <pre>
+     * 标准化状态
+     * </pre>
+     *
+     * <code>string scene_is_normalized = 23;</code>
+     * @return The sceneIsNormalized.
+     */
+    @java.lang.Override
+    public java.lang.String getSceneIsNormalized() {
+      java.lang.Object ref = sceneIsNormalized_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sceneIsNormalized_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 标准化状态
+     * </pre>
+     *
+     * <code>string scene_is_normalized = 23;</code>
+     * @return The bytes for sceneIsNormalized.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSceneIsNormalizedBytes() {
+      java.lang.Object ref = sceneIsNormalized_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sceneIsNormalized_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCENE_UPDATA_TIME_FIELD_NUMBER = 24;
+    private long sceneUpdataTime_;
+    /**
+     * <pre>
+     * 更新时间,ms
+     * </pre>
+     *
+     * <code>uint64 scene_updata_time = 24;</code>
+     * @return The sceneUpdataTime.
+     */
+    @java.lang.Override
+    public long getSceneUpdataTime() {
+      return sceneUpdataTime_;
+    }
+
+    public static final int EID_FIELD_NUMBER = 25;
     private volatile java.lang.Object eid_;
     /**
      * <pre>
      * 帖子类型，图文/视频/纯文字/转发 等
      * </pre>
      *
-     * <code>string eid = 7;</code>
+     * <code>string eid = 25;</code>
      * @return The eid.
      */
     @java.lang.Override
@@ -809,7 +1658,7 @@ public final class PersonProto {
      * 帖子类型，图文/视频/纯文字/转发 等
      * </pre>
      *
-     * <code>string eid = 7;</code>
+     * <code>string eid = 25;</code>
      * @return The bytes for eid.
      */
     @java.lang.Override
@@ -821,547 +1670,6 @@ public final class PersonProto {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         eid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SCENE_VID_FIELD_NUMBER = 8;
-    private volatile java.lang.Object sceneVid_;
-    /**
-     * <pre>
-     * 帖子内视频vid
-     * </pre>
-     *
-     * <code>string scene_vid = 8;</code>
-     * @return The sceneVid.
-     */
-    @java.lang.Override
-    public java.lang.String getSceneVid() {
-      java.lang.Object ref = sceneVid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sceneVid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 帖子内视频vid
-     * </pre>
-     *
-     * <code>string scene_vid = 8;</code>
-     * @return The bytes for sceneVid.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSceneVidBytes() {
-      java.lang.Object ref = sceneVid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sceneVid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ORIGINAL_SCENE_STATUS_FIELD_NUMBER = 9;
-    private volatile java.lang.Object originalSceneStatus_;
-    /**
-     * <pre>
-     * 转发帖引用原帖的状态
-     * </pre>
-     *
-     * <code>string original_scene_status = 9;</code>
-     * @return The originalSceneStatus.
-     */
-    @java.lang.Override
-    public java.lang.String getOriginalSceneStatus() {
-      java.lang.Object ref = originalSceneStatus_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        originalSceneStatus_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 转发帖引用原帖的状态
-     * </pre>
-     *
-     * <code>string original_scene_status = 9;</code>
-     * @return The bytes for originalSceneStatus.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getOriginalSceneStatusBytes() {
-      java.lang.Object ref = originalSceneStatus_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        originalSceneStatus_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SCENE_CONTENT_TYPE_FIELD_NUMBER = 10;
-    private volatile java.lang.Object sceneContentType_;
-    /**
-     * <pre>
-     * 帖子内容类型
-     * </pre>
-     *
-     * <code>string scene_content_type = 10;</code>
-     * @return The sceneContentType.
-     */
-    @java.lang.Override
-    public java.lang.String getSceneContentType() {
-      java.lang.Object ref = sceneContentType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sceneContentType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 帖子内容类型
-     * </pre>
-     *
-     * <code>string scene_content_type = 10;</code>
-     * @return The bytes for sceneContentType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSceneContentTypeBytes() {
-      java.lang.Object ref = sceneContentType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sceneContentType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SCENE_ATTITUDE_FIELD_NUMBER = 11;
-    private volatile java.lang.Object sceneAttitude_;
-    /**
-     * <pre>
-     * 态度
-     * </pre>
-     *
-     * <code>string scene_attitude = 11;</code>
-     * @return The sceneAttitude.
-     */
-    @java.lang.Override
-    public java.lang.String getSceneAttitude() {
-      java.lang.Object ref = sceneAttitude_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sceneAttitude_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 态度
-     * </pre>
-     *
-     * <code>string scene_attitude = 11;</code>
-     * @return The bytes for sceneAttitude.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSceneAttitudeBytes() {
-      java.lang.Object ref = sceneAttitude_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sceneAttitude_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SCENE_TAG_FIELD_NUMBER = 12;
-    private volatile java.lang.Object sceneTag_;
-    /**
-     * <pre>
-     * 观点实体
-     * </pre>
-     *
-     * <code>string scene_tag = 12;</code>
-     * @return The sceneTag.
-     */
-    @java.lang.Override
-    public java.lang.String getSceneTag() {
-      java.lang.Object ref = sceneTag_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sceneTag_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 观点实体
-     * </pre>
-     *
-     * <code>string scene_tag = 12;</code>
-     * @return The bytes for sceneTag.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSceneTagBytes() {
-      java.lang.Object ref = sceneTag_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sceneTag_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SCENE_TAG_LIST_FIELD_NUMBER = 13;
-    private com.google.protobuf.LazyStringList sceneTagList_;
-    /**
-     * <pre>
-     * 观点实体
-     * </pre>
-     *
-     * <code>repeated string scene_tag_list = 13;</code>
-     * @return A list containing the sceneTagList.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getSceneTagListList() {
-      return sceneTagList_;
-    }
-    /**
-     * <pre>
-     * 观点实体
-     * </pre>
-     *
-     * <code>repeated string scene_tag_list = 13;</code>
-     * @return The count of sceneTagList.
-     */
-    public int getSceneTagListCount() {
-      return sceneTagList_.size();
-    }
-    /**
-     * <pre>
-     * 观点实体
-     * </pre>
-     *
-     * <code>repeated string scene_tag_list = 13;</code>
-     * @param index The index of the element to return.
-     * @return The sceneTagList at the given index.
-     */
-    public java.lang.String getSceneTagList(int index) {
-      return sceneTagList_.get(index);
-    }
-    /**
-     * <pre>
-     * 观点实体
-     * </pre>
-     *
-     * <code>repeated string scene_tag_list = 13;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the sceneTagList at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getSceneTagListBytes(int index) {
-      return sceneTagList_.getByteString(index);
-    }
-
-    public static final int SCENE_IMG_FIELD_NUMBER = 14;
-    private volatile java.lang.Object sceneImg_;
-    /**
-     * <pre>
-     * 帖子内图片json信息(包含url、类型、长、宽)
-     * </pre>
-     *
-     * <code>string scene_img = 14;</code>
-     * @return The sceneImg.
-     */
-    @java.lang.Override
-    public java.lang.String getSceneImg() {
-      java.lang.Object ref = sceneImg_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sceneImg_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 帖子内图片json信息(包含url、类型、长、宽)
-     * </pre>
-     *
-     * <code>string scene_img = 14;</code>
-     * @return The bytes for sceneImg.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSceneImgBytes() {
-      java.lang.Object ref = sceneImg_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sceneImg_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int USER_TYPE_FIELD_NUMBER = 15;
-    private volatile java.lang.Object userType_;
-    /**
-     * <pre>
-     * 帐号类型，0=普通用户;1=UGC;2=明星;3`=机构号;4=媒体号;5=企业号;6=政府号;7=大IP号;8=影视公司号;9=公益机构;10=社区权威号;11=社区优质号;12=社区达人号;13=社区外团号
-     * </pre>
-     *
-     * <code>string user_type = 15;</code>
-     * @return The userType.
-     */
-    @java.lang.Override
-    public java.lang.String getUserType() {
-      java.lang.Object ref = userType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        userType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 帐号类型，0=普通用户;1=UGC;2=明星;3`=机构号;4=媒体号;5=企业号;6=政府号;7=大IP号;8=影视公司号;9=公益机构;10=社区权威号;11=社区优质号;12=社区达人号;13=社区外团号
-     * </pre>
-     *
-     * <code>string user_type = 15;</code>
-     * @return The bytes for userType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUserTypeBytes() {
-      java.lang.Object ref = userType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        userType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CORRELATION_JSON_FIELD_NUMBER = 16;
-    private volatile java.lang.Object correlationJson_;
-    /**
-     * <pre>
-     * 帖子与话题&amp;doki相关性
-     * </pre>
-     *
-     * <code>string correlation_json = 16;</code>
-     * @return The correlationJson.
-     */
-    @java.lang.Override
-    public java.lang.String getCorrelationJson() {
-      java.lang.Object ref = correlationJson_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        correlationJson_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 帖子与话题&amp;doki相关性
-     * </pre>
-     *
-     * <code>string correlation_json = 16;</code>
-     * @return The bytes for correlationJson.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCorrelationJsonBytes() {
-      java.lang.Object ref = correlationJson_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        correlationJson_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int IP_DOKI_CORRELATION_JSON_FIELD_NUMBER = 17;
-    private volatile java.lang.Object ipDokiCorrelationJson_;
-    /**
-     * <pre>
-     * 帖子与ipdoki相关性
-     * </pre>
-     *
-     * <code>string ip_doki_correlation_json = 17;</code>
-     * @return The ipDokiCorrelationJson.
-     */
-    @java.lang.Override
-    public java.lang.String getIpDokiCorrelationJson() {
-      java.lang.Object ref = ipDokiCorrelationJson_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        ipDokiCorrelationJson_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 帖子与ipdoki相关性
-     * </pre>
-     *
-     * <code>string ip_doki_correlation_json = 17;</code>
-     * @return The bytes for ipDokiCorrelationJson.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIpDokiCorrelationJsonBytes() {
-      java.lang.Object ref = ipDokiCorrelationJson_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        ipDokiCorrelationJson_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int LIKE_NUM_FIELD_NUMBER = 18;
-    private long likeNum_;
-    /**
-     * <pre>
-     * 点赞数
-     * </pre>
-     *
-     * <code>uint64 like_num = 18;</code>
-     * @return The likeNum.
-     */
-    @java.lang.Override
-    public long getLikeNum() {
-      return likeNum_;
-    }
-
-    public static final int COMMENT_NUM_FIELD_NUMBER = 19;
-    private long commentNum_;
-    /**
-     * <pre>
-     * 评论数
-     * </pre>
-     *
-     * <code>uint64 comment_num = 19;</code>
-     * @return The commentNum.
-     */
-    @java.lang.Override
-    public long getCommentNum() {
-      return commentNum_;
-    }
-
-    public static final int IS_HIGH_QUALITY_FIELD_NUMBER = 20;
-    private volatile java.lang.Object isHighQuality_;
-    /**
-     * <pre>
-     * 是否优质帖，1：人工优质；2：机器优质；3：否
-     * </pre>
-     *
-     * <code>string is_high_quality = 20;</code>
-     * @return The isHighQuality.
-     */
-    @java.lang.Override
-    public java.lang.String getIsHighQuality() {
-      java.lang.Object ref = isHighQuality_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        isHighQuality_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 是否优质帖，1：人工优质；2：机器优质；3：否
-     * </pre>
-     *
-     * <code>string is_high_quality = 20;</code>
-     * @return The bytes for isHighQuality.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIsHighQualityBytes() {
-      java.lang.Object ref = isHighQuality_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        isHighQuality_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1397,50 +1705,65 @@ public final class PersonProto {
       for (int i = 0; i < xxx_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, xxx_.getRaw(i));
       }
-      if (age_ != 0L) {
-        output.writeUInt64(6, age_);
+      for (int i = 0; i < dokiidsList_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, dokiidsList_.getRaw(i));
+      }
+      if (!getTopicidsBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, topicids_);
+      }
+      for (int i = 0; i < topicidsList_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, topicidsList_.getRaw(i));
+      }
+      if (pushTimestamp_ != 0L) {
+        output.writeUInt64(9, pushTimestamp_);
+      }
+      if (!getSceneStatusBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, sceneStatus_);
+      }
+      if (dataVersion_ != 0L) {
+        output.writeUInt64(11, dataVersion_);
+      }
+      if (modifyTime_ != 0L) {
+        output.writeUInt64(12, modifyTime_);
+      }
+      if (timestamp_ != 0L) {
+        output.writeUInt64(13, timestamp_);
+      }
+      if (!getUploadUnderVidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, uploadUnderVid_);
+      }
+      if (!getUploadUnderCidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, uploadUnderCid_);
+      }
+      if (!getUploadUnderLidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, uploadUnderLid_);
+      }
+      if (!getFeedTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, feedType_);
+      }
+      for (int i = 0; i < feedTypeList_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, feedTypeList_.getRaw(i));
+      }
+      if (!getOriginalFeedidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 19, originalFeedid_);
+      }
+      if (!getFeedTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 20, feedText_);
+      }
+      if (!getVuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 21, vuid_);
+      }
+      if (sceneUploadTime_ != 0L) {
+        output.writeUInt64(22, sceneUploadTime_);
+      }
+      if (!getSceneIsNormalizedBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 23, sceneIsNormalized_);
+      }
+      if (sceneUpdataTime_ != 0L) {
+        output.writeUInt64(24, sceneUpdataTime_);
       }
       if (!getEidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, eid_);
-      }
-      if (!getSceneVidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, sceneVid_);
-      }
-      if (!getOriginalSceneStatusBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, originalSceneStatus_);
-      }
-      if (!getSceneContentTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, sceneContentType_);
-      }
-      if (!getSceneAttitudeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, sceneAttitude_);
-      }
-      if (!getSceneTagBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, sceneTag_);
-      }
-      for (int i = 0; i < sceneTagList_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, sceneTagList_.getRaw(i));
-      }
-      if (!getSceneImgBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, sceneImg_);
-      }
-      if (!getUserTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, userType_);
-      }
-      if (!getCorrelationJsonBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, correlationJson_);
-      }
-      if (!getIpDokiCorrelationJsonBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, ipDokiCorrelationJson_);
-      }
-      if (likeNum_ != 0L) {
-        output.writeUInt64(18, likeNum_);
-      }
-      if (commentNum_ != 0L) {
-        output.writeUInt64(19, commentNum_);
-      }
-      if (!getIsHighQualityBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 20, isHighQuality_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 25, eid_);
       }
       unknownFields.writeTo(output);
     }
@@ -1477,58 +1800,86 @@ public final class PersonProto {
         size += dataSize;
         size += 1 * getXxxList().size();
       }
-      if (age_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(6, age_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < dokiidsList_.size(); i++) {
+          dataSize += computeStringSizeNoTag(dokiidsList_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDokiidsListList().size();
       }
-      if (!getEidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, eid_);
-      }
-      if (!getSceneVidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, sceneVid_);
-      }
-      if (!getOriginalSceneStatusBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, originalSceneStatus_);
-      }
-      if (!getSceneContentTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, sceneContentType_);
-      }
-      if (!getSceneAttitudeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, sceneAttitude_);
-      }
-      if (!getSceneTagBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, sceneTag_);
+      if (!getTopicidsBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, topicids_);
       }
       {
         int dataSize = 0;
-        for (int i = 0; i < sceneTagList_.size(); i++) {
-          dataSize += computeStringSizeNoTag(sceneTagList_.getRaw(i));
+        for (int i = 0; i < topicidsList_.size(); i++) {
+          dataSize += computeStringSizeNoTag(topicidsList_.getRaw(i));
         }
         size += dataSize;
-        size += 1 * getSceneTagListList().size();
+        size += 1 * getTopicidsListList().size();
       }
-      if (!getSceneImgBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, sceneImg_);
-      }
-      if (!getUserTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, userType_);
-      }
-      if (!getCorrelationJsonBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, correlationJson_);
-      }
-      if (!getIpDokiCorrelationJsonBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, ipDokiCorrelationJson_);
-      }
-      if (likeNum_ != 0L) {
+      if (pushTimestamp_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(18, likeNum_);
+          .computeUInt64Size(9, pushTimestamp_);
       }
-      if (commentNum_ != 0L) {
+      if (!getSceneStatusBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, sceneStatus_);
+      }
+      if (dataVersion_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(19, commentNum_);
+          .computeUInt64Size(11, dataVersion_);
       }
-      if (!getIsHighQualityBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, isHighQuality_);
+      if (modifyTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(12, modifyTime_);
+      }
+      if (timestamp_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(13, timestamp_);
+      }
+      if (!getUploadUnderVidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, uploadUnderVid_);
+      }
+      if (!getUploadUnderCidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, uploadUnderCid_);
+      }
+      if (!getUploadUnderLidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, uploadUnderLid_);
+      }
+      if (!getFeedTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, feedType_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < feedTypeList_.size(); i++) {
+          dataSize += computeStringSizeNoTag(feedTypeList_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getFeedTypeListList().size();
+      }
+      if (!getOriginalFeedidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, originalFeedid_);
+      }
+      if (!getFeedTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, feedText_);
+      }
+      if (!getVuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, vuid_);
+      }
+      if (sceneUploadTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(22, sceneUploadTime_);
+      }
+      if (!getSceneIsNormalizedBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, sceneIsNormalized_);
+      }
+      if (sceneUpdataTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(24, sceneUpdataTime_);
+      }
+      if (!getEidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, eid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1555,36 +1906,46 @@ public final class PersonProto {
           .equals(other.getAddressList())) return false;
       if (!getXxxList()
           .equals(other.getXxxList())) return false;
-      if (getAge()
-          != other.getAge()) return false;
+      if (!getDokiidsListList()
+          .equals(other.getDokiidsListList())) return false;
+      if (!getTopicids()
+          .equals(other.getTopicids())) return false;
+      if (!getTopicidsListList()
+          .equals(other.getTopicidsListList())) return false;
+      if (getPushTimestamp()
+          != other.getPushTimestamp()) return false;
+      if (!getSceneStatus()
+          .equals(other.getSceneStatus())) return false;
+      if (getDataVersion()
+          != other.getDataVersion()) return false;
+      if (getModifyTime()
+          != other.getModifyTime()) return false;
+      if (getTimestamp()
+          != other.getTimestamp()) return false;
+      if (!getUploadUnderVid()
+          .equals(other.getUploadUnderVid())) return false;
+      if (!getUploadUnderCid()
+          .equals(other.getUploadUnderCid())) return false;
+      if (!getUploadUnderLid()
+          .equals(other.getUploadUnderLid())) return false;
+      if (!getFeedType()
+          .equals(other.getFeedType())) return false;
+      if (!getFeedTypeListList()
+          .equals(other.getFeedTypeListList())) return false;
+      if (!getOriginalFeedid()
+          .equals(other.getOriginalFeedid())) return false;
+      if (!getFeedText()
+          .equals(other.getFeedText())) return false;
+      if (!getVuid()
+          .equals(other.getVuid())) return false;
+      if (getSceneUploadTime()
+          != other.getSceneUploadTime()) return false;
+      if (!getSceneIsNormalized()
+          .equals(other.getSceneIsNormalized())) return false;
+      if (getSceneUpdataTime()
+          != other.getSceneUpdataTime()) return false;
       if (!getEid()
           .equals(other.getEid())) return false;
-      if (!getSceneVid()
-          .equals(other.getSceneVid())) return false;
-      if (!getOriginalSceneStatus()
-          .equals(other.getOriginalSceneStatus())) return false;
-      if (!getSceneContentType()
-          .equals(other.getSceneContentType())) return false;
-      if (!getSceneAttitude()
-          .equals(other.getSceneAttitude())) return false;
-      if (!getSceneTag()
-          .equals(other.getSceneTag())) return false;
-      if (!getSceneTagListList()
-          .equals(other.getSceneTagListList())) return false;
-      if (!getSceneImg()
-          .equals(other.getSceneImg())) return false;
-      if (!getUserType()
-          .equals(other.getUserType())) return false;
-      if (!getCorrelationJson()
-          .equals(other.getCorrelationJson())) return false;
-      if (!getIpDokiCorrelationJson()
-          .equals(other.getIpDokiCorrelationJson())) return false;
-      if (getLikeNum()
-          != other.getLikeNum()) return false;
-      if (getCommentNum()
-          != other.getCommentNum()) return false;
-      if (!getIsHighQuality()
-          .equals(other.getIsHighQuality())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1610,41 +1971,58 @@ public final class PersonProto {
         hash = (37 * hash) + XXX_FIELD_NUMBER;
         hash = (53 * hash) + getXxxList().hashCode();
       }
-      hash = (37 * hash) + AGE_FIELD_NUMBER;
+      if (getDokiidsListCount() > 0) {
+        hash = (37 * hash) + DOKIIDS_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getDokiidsListList().hashCode();
+      }
+      hash = (37 * hash) + TOPICIDS_FIELD_NUMBER;
+      hash = (53 * hash) + getTopicids().hashCode();
+      if (getTopicidsListCount() > 0) {
+        hash = (37 * hash) + TOPICIDS_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getTopicidsListList().hashCode();
+      }
+      hash = (37 * hash) + PUSH_TIMESTAMP_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAge());
+          getPushTimestamp());
+      hash = (37 * hash) + SCENE_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getSceneStatus().hashCode();
+      hash = (37 * hash) + DATA_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDataVersion());
+      hash = (37 * hash) + MODIFY_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getModifyTime());
+      hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTimestamp());
+      hash = (37 * hash) + UPLOAD_UNDER_VID_FIELD_NUMBER;
+      hash = (53 * hash) + getUploadUnderVid().hashCode();
+      hash = (37 * hash) + UPLOAD_UNDER_CID_FIELD_NUMBER;
+      hash = (53 * hash) + getUploadUnderCid().hashCode();
+      hash = (37 * hash) + UPLOAD_UNDER_LID_FIELD_NUMBER;
+      hash = (53 * hash) + getUploadUnderLid().hashCode();
+      hash = (37 * hash) + FEED_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedType().hashCode();
+      if (getFeedTypeListCount() > 0) {
+        hash = (37 * hash) + FEED_TYPE_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getFeedTypeListList().hashCode();
+      }
+      hash = (37 * hash) + ORIGINAL_FEEDID_FIELD_NUMBER;
+      hash = (53 * hash) + getOriginalFeedid().hashCode();
+      hash = (37 * hash) + FEED_TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedText().hashCode();
+      hash = (37 * hash) + VUID_FIELD_NUMBER;
+      hash = (53 * hash) + getVuid().hashCode();
+      hash = (37 * hash) + SCENE_UPLOAD_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSceneUploadTime());
+      hash = (37 * hash) + SCENE_IS_NORMALIZED_FIELD_NUMBER;
+      hash = (53 * hash) + getSceneIsNormalized().hashCode();
+      hash = (37 * hash) + SCENE_UPDATA_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSceneUpdataTime());
       hash = (37 * hash) + EID_FIELD_NUMBER;
       hash = (53 * hash) + getEid().hashCode();
-      hash = (37 * hash) + SCENE_VID_FIELD_NUMBER;
-      hash = (53 * hash) + getSceneVid().hashCode();
-      hash = (37 * hash) + ORIGINAL_SCENE_STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + getOriginalSceneStatus().hashCode();
-      hash = (37 * hash) + SCENE_CONTENT_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getSceneContentType().hashCode();
-      hash = (37 * hash) + SCENE_ATTITUDE_FIELD_NUMBER;
-      hash = (53 * hash) + getSceneAttitude().hashCode();
-      hash = (37 * hash) + SCENE_TAG_FIELD_NUMBER;
-      hash = (53 * hash) + getSceneTag().hashCode();
-      if (getSceneTagListCount() > 0) {
-        hash = (37 * hash) + SCENE_TAG_LIST_FIELD_NUMBER;
-        hash = (53 * hash) + getSceneTagListList().hashCode();
-      }
-      hash = (37 * hash) + SCENE_IMG_FIELD_NUMBER;
-      hash = (53 * hash) + getSceneImg().hashCode();
-      hash = (37 * hash) + USER_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getUserType().hashCode();
-      hash = (37 * hash) + CORRELATION_JSON_FIELD_NUMBER;
-      hash = (53 * hash) + getCorrelationJson().hashCode();
-      hash = (37 * hash) + IP_DOKI_CORRELATION_JSON_FIELD_NUMBER;
-      hash = (53 * hash) + getIpDokiCorrelationJson().hashCode();
-      hash = (37 * hash) + LIKE_NUM_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getLikeNum());
-      hash = (37 * hash) + COMMENT_NUM_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getCommentNum());
-      hash = (37 * hash) + IS_HIGH_QUALITY_FIELD_NUMBER;
-      hash = (53 * hash) + getIsHighQuality().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1788,35 +2166,45 @@ public final class PersonProto {
         bitField0_ = (bitField0_ & ~0x00000001);
         xxx_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
-        age_ = 0L;
+        dokiidsList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        topicids_ = "";
+
+        topicidsList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        pushTimestamp_ = 0L;
+
+        sceneStatus_ = "";
+
+        dataVersion_ = 0L;
+
+        modifyTime_ = 0L;
+
+        timestamp_ = 0L;
+
+        uploadUnderVid_ = "";
+
+        uploadUnderCid_ = "";
+
+        uploadUnderLid_ = "";
+
+        feedType_ = "";
+
+        feedTypeList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        originalFeedid_ = "";
+
+        feedText_ = "";
+
+        vuid_ = "";
+
+        sceneUploadTime_ = 0L;
+
+        sceneIsNormalized_ = "";
+
+        sceneUpdataTime_ = 0L;
 
         eid_ = "";
-
-        sceneVid_ = "";
-
-        originalSceneStatus_ = "";
-
-        sceneContentType_ = "";
-
-        sceneAttitude_ = "";
-
-        sceneTag_ = "";
-
-        sceneTagList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        sceneImg_ = "";
-
-        userType_ = "";
-
-        correlationJson_ = "";
-
-        ipDokiCorrelationJson_ = "";
-
-        likeNum_ = 0L;
-
-        commentNum_ = 0L;
-
-        isHighQuality_ = "";
 
         return this;
       }
@@ -1858,25 +2246,38 @@ public final class PersonProto {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.xxx_ = xxx_;
-        result.age_ = age_;
-        result.eid_ = eid_;
-        result.sceneVid_ = sceneVid_;
-        result.originalSceneStatus_ = originalSceneStatus_;
-        result.sceneContentType_ = sceneContentType_;
-        result.sceneAttitude_ = sceneAttitude_;
-        result.sceneTag_ = sceneTag_;
         if (((bitField0_ & 0x00000004) != 0)) {
-          sceneTagList_ = sceneTagList_.getUnmodifiableView();
+          dokiidsList_ = dokiidsList_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000004);
         }
-        result.sceneTagList_ = sceneTagList_;
-        result.sceneImg_ = sceneImg_;
-        result.userType_ = userType_;
-        result.correlationJson_ = correlationJson_;
-        result.ipDokiCorrelationJson_ = ipDokiCorrelationJson_;
-        result.likeNum_ = likeNum_;
-        result.commentNum_ = commentNum_;
-        result.isHighQuality_ = isHighQuality_;
+        result.dokiidsList_ = dokiidsList_;
+        result.topicids_ = topicids_;
+        if (((bitField0_ & 0x00000008) != 0)) {
+          topicidsList_ = topicidsList_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.topicidsList_ = topicidsList_;
+        result.pushTimestamp_ = pushTimestamp_;
+        result.sceneStatus_ = sceneStatus_;
+        result.dataVersion_ = dataVersion_;
+        result.modifyTime_ = modifyTime_;
+        result.timestamp_ = timestamp_;
+        result.uploadUnderVid_ = uploadUnderVid_;
+        result.uploadUnderCid_ = uploadUnderCid_;
+        result.uploadUnderLid_ = uploadUnderLid_;
+        result.feedType_ = feedType_;
+        if (((bitField0_ & 0x00000010) != 0)) {
+          feedTypeList_ = feedTypeList_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.feedTypeList_ = feedTypeList_;
+        result.originalFeedid_ = originalFeedid_;
+        result.feedText_ = feedText_;
+        result.vuid_ = vuid_;
+        result.sceneUploadTime_ = sceneUploadTime_;
+        result.sceneIsNormalized_ = sceneIsNormalized_;
+        result.sceneUpdataTime_ = sceneUpdataTime_;
+        result.eid_ = eid_;
         onBuilt();
         return result;
       }
@@ -1956,67 +2357,96 @@ public final class PersonProto {
           }
           onChanged();
         }
-        if (other.getAge() != 0L) {
-          setAge(other.getAge());
-        }
-        if (!other.getEid().isEmpty()) {
-          eid_ = other.eid_;
-          onChanged();
-        }
-        if (!other.getSceneVid().isEmpty()) {
-          sceneVid_ = other.sceneVid_;
-          onChanged();
-        }
-        if (!other.getOriginalSceneStatus().isEmpty()) {
-          originalSceneStatus_ = other.originalSceneStatus_;
-          onChanged();
-        }
-        if (!other.getSceneContentType().isEmpty()) {
-          sceneContentType_ = other.sceneContentType_;
-          onChanged();
-        }
-        if (!other.getSceneAttitude().isEmpty()) {
-          sceneAttitude_ = other.sceneAttitude_;
-          onChanged();
-        }
-        if (!other.getSceneTag().isEmpty()) {
-          sceneTag_ = other.sceneTag_;
-          onChanged();
-        }
-        if (!other.sceneTagList_.isEmpty()) {
-          if (sceneTagList_.isEmpty()) {
-            sceneTagList_ = other.sceneTagList_;
+        if (!other.dokiidsList_.isEmpty()) {
+          if (dokiidsList_.isEmpty()) {
+            dokiidsList_ = other.dokiidsList_;
             bitField0_ = (bitField0_ & ~0x00000004);
           } else {
-            ensureSceneTagListIsMutable();
-            sceneTagList_.addAll(other.sceneTagList_);
+            ensureDokiidsListIsMutable();
+            dokiidsList_.addAll(other.dokiidsList_);
           }
           onChanged();
         }
-        if (!other.getSceneImg().isEmpty()) {
-          sceneImg_ = other.sceneImg_;
+        if (!other.getTopicids().isEmpty()) {
+          topicids_ = other.topicids_;
           onChanged();
         }
-        if (!other.getUserType().isEmpty()) {
-          userType_ = other.userType_;
+        if (!other.topicidsList_.isEmpty()) {
+          if (topicidsList_.isEmpty()) {
+            topicidsList_ = other.topicidsList_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureTopicidsListIsMutable();
+            topicidsList_.addAll(other.topicidsList_);
+          }
           onChanged();
         }
-        if (!other.getCorrelationJson().isEmpty()) {
-          correlationJson_ = other.correlationJson_;
+        if (other.getPushTimestamp() != 0L) {
+          setPushTimestamp(other.getPushTimestamp());
+        }
+        if (!other.getSceneStatus().isEmpty()) {
+          sceneStatus_ = other.sceneStatus_;
           onChanged();
         }
-        if (!other.getIpDokiCorrelationJson().isEmpty()) {
-          ipDokiCorrelationJson_ = other.ipDokiCorrelationJson_;
+        if (other.getDataVersion() != 0L) {
+          setDataVersion(other.getDataVersion());
+        }
+        if (other.getModifyTime() != 0L) {
+          setModifyTime(other.getModifyTime());
+        }
+        if (other.getTimestamp() != 0L) {
+          setTimestamp(other.getTimestamp());
+        }
+        if (!other.getUploadUnderVid().isEmpty()) {
+          uploadUnderVid_ = other.uploadUnderVid_;
           onChanged();
         }
-        if (other.getLikeNum() != 0L) {
-          setLikeNum(other.getLikeNum());
+        if (!other.getUploadUnderCid().isEmpty()) {
+          uploadUnderCid_ = other.uploadUnderCid_;
+          onChanged();
         }
-        if (other.getCommentNum() != 0L) {
-          setCommentNum(other.getCommentNum());
+        if (!other.getUploadUnderLid().isEmpty()) {
+          uploadUnderLid_ = other.uploadUnderLid_;
+          onChanged();
         }
-        if (!other.getIsHighQuality().isEmpty()) {
-          isHighQuality_ = other.isHighQuality_;
+        if (!other.getFeedType().isEmpty()) {
+          feedType_ = other.feedType_;
+          onChanged();
+        }
+        if (!other.feedTypeList_.isEmpty()) {
+          if (feedTypeList_.isEmpty()) {
+            feedTypeList_ = other.feedTypeList_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureFeedTypeListIsMutable();
+            feedTypeList_.addAll(other.feedTypeList_);
+          }
+          onChanged();
+        }
+        if (!other.getOriginalFeedid().isEmpty()) {
+          originalFeedid_ = other.originalFeedid_;
+          onChanged();
+        }
+        if (!other.getFeedText().isEmpty()) {
+          feedText_ = other.feedText_;
+          onChanged();
+        }
+        if (!other.getVuid().isEmpty()) {
+          vuid_ = other.vuid_;
+          onChanged();
+        }
+        if (other.getSceneUploadTime() != 0L) {
+          setSceneUploadTime(other.getSceneUploadTime());
+        }
+        if (!other.getSceneIsNormalized().isEmpty()) {
+          sceneIsNormalized_ = other.sceneIsNormalized_;
+          onChanged();
+        }
+        if (other.getSceneUpdataTime() != 0L) {
+          setSceneUpdataTime(other.getSceneUpdataTime());
+        }
+        if (!other.getEid().isEmpty()) {
+          eid_ = other.eid_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2452,33 +2882,1658 @@ public final class PersonProto {
         return this;
       }
 
-      private long age_ ;
-      /**
-       * <code>uint64 age = 6;</code>
-       * @return The age.
-       */
-      @java.lang.Override
-      public long getAge() {
-        return age_;
+      private com.google.protobuf.LazyStringList dokiidsList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureDokiidsListIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          dokiidsList_ = new com.google.protobuf.LazyStringArrayList(dokiidsList_);
+          bitField0_ |= 0x00000004;
+         }
       }
       /**
-       * <code>uint64 age = 6;</code>
-       * @param value The age to set.
+       * <pre>
+       *所属圈子id集合
+       * </pre>
+       *
+       * <code>repeated string dokiids_list = 6;</code>
+       * @return A list containing the dokiidsList.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDokiidsListList() {
+        return dokiidsList_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       *所属圈子id集合
+       * </pre>
+       *
+       * <code>repeated string dokiids_list = 6;</code>
+       * @return The count of dokiidsList.
+       */
+      public int getDokiidsListCount() {
+        return dokiidsList_.size();
+      }
+      /**
+       * <pre>
+       *所属圈子id集合
+       * </pre>
+       *
+       * <code>repeated string dokiids_list = 6;</code>
+       * @param index The index of the element to return.
+       * @return The dokiidsList at the given index.
+       */
+      public java.lang.String getDokiidsList(int index) {
+        return dokiidsList_.get(index);
+      }
+      /**
+       * <pre>
+       *所属圈子id集合
+       * </pre>
+       *
+       * <code>repeated string dokiids_list = 6;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the dokiidsList at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getDokiidsListBytes(int index) {
+        return dokiidsList_.getByteString(index);
+      }
+      /**
+       * <pre>
+       *所属圈子id集合
+       * </pre>
+       *
+       * <code>repeated string dokiids_list = 6;</code>
+       * @param index The index to set the value at.
+       * @param value The dokiidsList to set.
        * @return This builder for chaining.
        */
-      public Builder setAge(long value) {
-        
-        age_ = value;
+      public Builder setDokiidsList(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDokiidsListIsMutable();
+        dokiidsList_.set(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 age = 6;</code>
+       * <pre>
+       *所属圈子id集合
+       * </pre>
+       *
+       * <code>repeated string dokiids_list = 6;</code>
+       * @param value The dokiidsList to add.
        * @return This builder for chaining.
        */
-      public Builder clearAge() {
+      public Builder addDokiidsList(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDokiidsListIsMutable();
+        dokiidsList_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *所属圈子id集合
+       * </pre>
+       *
+       * <code>repeated string dokiids_list = 6;</code>
+       * @param values The dokiidsList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDokiidsList(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDokiidsListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, dokiidsList_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *所属圈子id集合
+       * </pre>
+       *
+       * <code>repeated string dokiids_list = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDokiidsList() {
+        dokiidsList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *所属圈子id集合
+       * </pre>
+       *
+       * <code>repeated string dokiids_list = 6;</code>
+       * @param value The bytes of the dokiidsList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDokiidsListBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureDokiidsListIsMutable();
+        dokiidsList_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object topicids_ = "";
+      /**
+       * <pre>
+       *所属话题id集合
+       * </pre>
+       *
+       * <code>string topicids = 7;</code>
+       * @return The topicids.
+       */
+      public java.lang.String getTopicids() {
+        java.lang.Object ref = topicids_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          topicids_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *所属话题id集合
+       * </pre>
+       *
+       * <code>string topicids = 7;</code>
+       * @return The bytes for topicids.
+       */
+      public com.google.protobuf.ByteString
+          getTopicidsBytes() {
+        java.lang.Object ref = topicids_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          topicids_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *所属话题id集合
+       * </pre>
+       *
+       * <code>string topicids = 7;</code>
+       * @param value The topicids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicids(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        topicids_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *所属话题id集合
+       * </pre>
+       *
+       * <code>string topicids = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicids() {
         
-        age_ = 0L;
+        topicids_ = getDefaultInstance().getTopicids();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *所属话题id集合
+       * </pre>
+       *
+       * <code>string topicids = 7;</code>
+       * @param value The bytes for topicids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicidsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        topicids_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList topicidsList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTopicidsListIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          topicidsList_ = new com.google.protobuf.LazyStringArrayList(topicidsList_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <pre>
+       *所属话题id集合
+       * </pre>
+       *
+       * <code>repeated string topicids_list = 8;</code>
+       * @return A list containing the topicidsList.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTopicidsListList() {
+        return topicidsList_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       *所属话题id集合
+       * </pre>
+       *
+       * <code>repeated string topicids_list = 8;</code>
+       * @return The count of topicidsList.
+       */
+      public int getTopicidsListCount() {
+        return topicidsList_.size();
+      }
+      /**
+       * <pre>
+       *所属话题id集合
+       * </pre>
+       *
+       * <code>repeated string topicids_list = 8;</code>
+       * @param index The index of the element to return.
+       * @return The topicidsList at the given index.
+       */
+      public java.lang.String getTopicidsList(int index) {
+        return topicidsList_.get(index);
+      }
+      /**
+       * <pre>
+       *所属话题id集合
+       * </pre>
+       *
+       * <code>repeated string topicids_list = 8;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the topicidsList at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTopicidsListBytes(int index) {
+        return topicidsList_.getByteString(index);
+      }
+      /**
+       * <pre>
+       *所属话题id集合
+       * </pre>
+       *
+       * <code>repeated string topicids_list = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The topicidsList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicidsList(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTopicidsListIsMutable();
+        topicidsList_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *所属话题id集合
+       * </pre>
+       *
+       * <code>repeated string topicids_list = 8;</code>
+       * @param value The topicidsList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTopicidsList(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTopicidsListIsMutable();
+        topicidsList_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *所属话题id集合
+       * </pre>
+       *
+       * <code>repeated string topicids_list = 8;</code>
+       * @param values The topicidsList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTopicidsList(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTopicidsListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, topicidsList_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *所属话题id集合
+       * </pre>
+       *
+       * <code>repeated string topicids_list = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicidsList() {
+        topicidsList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *所属话题id集合
+       * </pre>
+       *
+       * <code>repeated string topicids_list = 8;</code>
+       * @param value The bytes of the topicidsList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTopicidsListBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTopicidsListIsMutable();
+        topicidsList_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private long pushTimestamp_ ;
+      /**
+       * <pre>
+       *上游消息推送时间
+       * </pre>
+       *
+       * <code>uint64 push_timestamp = 9;</code>
+       * @return The pushTimestamp.
+       */
+      @java.lang.Override
+      public long getPushTimestamp() {
+        return pushTimestamp_;
+      }
+      /**
+       * <pre>
+       *上游消息推送时间
+       * </pre>
+       *
+       * <code>uint64 push_timestamp = 9;</code>
+       * @param value The pushTimestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPushTimestamp(long value) {
+        
+        pushTimestamp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *上游消息推送时间
+       * </pre>
+       *
+       * <code>uint64 push_timestamp = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPushTimestamp() {
+        
+        pushTimestamp_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sceneStatus_ = "";
+      /**
+       * <pre>
+       * 帖子状态
+       * </pre>
+       *
+       * <code>string scene_status = 10;</code>
+       * @return The sceneStatus.
+       */
+      public java.lang.String getSceneStatus() {
+        java.lang.Object ref = sceneStatus_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sceneStatus_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 帖子状态
+       * </pre>
+       *
+       * <code>string scene_status = 10;</code>
+       * @return The bytes for sceneStatus.
+       */
+      public com.google.protobuf.ByteString
+          getSceneStatusBytes() {
+        java.lang.Object ref = sceneStatus_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sceneStatus_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 帖子状态
+       * </pre>
+       *
+       * <code>string scene_status = 10;</code>
+       * @param value The sceneStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSceneStatus(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sceneStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 帖子状态
+       * </pre>
+       *
+       * <code>string scene_status = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSceneStatus() {
+        
+        sceneStatus_ = getDefaultInstance().getSceneStatus();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 帖子状态
+       * </pre>
+       *
+       * <code>string scene_status = 10;</code>
+       * @param value The bytes for sceneStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSceneStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sceneStatus_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long dataVersion_ ;
+      /**
+       * <pre>
+       * 数据版本，使用unix毫秒时间戳
+       * </pre>
+       *
+       * <code>uint64 data_version = 11;</code>
+       * @return The dataVersion.
+       */
+      @java.lang.Override
+      public long getDataVersion() {
+        return dataVersion_;
+      }
+      /**
+       * <pre>
+       * 数据版本，使用unix毫秒时间戳
+       * </pre>
+       *
+       * <code>uint64 data_version = 11;</code>
+       * @param value The dataVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataVersion(long value) {
+        
+        dataVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 数据版本，使用unix毫秒时间戳
+       * </pre>
+       *
+       * <code>uint64 data_version = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataVersion() {
+        
+        dataVersion_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long modifyTime_ ;
+      /**
+       * <pre>
+       * 实时流处理时间
+       * </pre>
+       *
+       * <code>uint64 modify_time = 12;</code>
+       * @return The modifyTime.
+       */
+      @java.lang.Override
+      public long getModifyTime() {
+        return modifyTime_;
+      }
+      /**
+       * <pre>
+       * 实时流处理时间
+       * </pre>
+       *
+       * <code>uint64 modify_time = 12;</code>
+       * @param value The modifyTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModifyTime(long value) {
+        
+        modifyTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 实时流处理时间
+       * </pre>
+       *
+       * <code>uint64 modify_time = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModifyTime() {
+        
+        modifyTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long timestamp_ ;
+      /**
+       * <pre>
+       * 正排的时间戳
+       * </pre>
+       *
+       * <code>uint64 timestamp = 13;</code>
+       * @return The timestamp.
+       */
+      @java.lang.Override
+      public long getTimestamp() {
+        return timestamp_;
+      }
+      /**
+       * <pre>
+       * 正排的时间戳
+       * </pre>
+       *
+       * <code>uint64 timestamp = 13;</code>
+       * @param value The timestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimestamp(long value) {
+        
+        timestamp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 正排的时间戳
+       * </pre>
+       *
+       * <code>uint64 timestamp = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimestamp() {
+        
+        timestamp_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uploadUnderVid_ = "";
+      /**
+       * <pre>
+       * 底层页发表时所属vid
+       * </pre>
+       *
+       * <code>string upload_under_vid = 14;</code>
+       * @return The uploadUnderVid.
+       */
+      public java.lang.String getUploadUnderVid() {
+        java.lang.Object ref = uploadUnderVid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uploadUnderVid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 底层页发表时所属vid
+       * </pre>
+       *
+       * <code>string upload_under_vid = 14;</code>
+       * @return The bytes for uploadUnderVid.
+       */
+      public com.google.protobuf.ByteString
+          getUploadUnderVidBytes() {
+        java.lang.Object ref = uploadUnderVid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uploadUnderVid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 底层页发表时所属vid
+       * </pre>
+       *
+       * <code>string upload_under_vid = 14;</code>
+       * @param value The uploadUnderVid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUploadUnderVid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uploadUnderVid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 底层页发表时所属vid
+       * </pre>
+       *
+       * <code>string upload_under_vid = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUploadUnderVid() {
+        
+        uploadUnderVid_ = getDefaultInstance().getUploadUnderVid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 底层页发表时所属vid
+       * </pre>
+       *
+       * <code>string upload_under_vid = 14;</code>
+       * @param value The bytes for uploadUnderVid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUploadUnderVidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uploadUnderVid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uploadUnderCid_ = "";
+      /**
+       * <pre>
+       * 底层页发表时所属cid
+       * </pre>
+       *
+       * <code>string upload_under_cid = 15;</code>
+       * @return The uploadUnderCid.
+       */
+      public java.lang.String getUploadUnderCid() {
+        java.lang.Object ref = uploadUnderCid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uploadUnderCid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 底层页发表时所属cid
+       * </pre>
+       *
+       * <code>string upload_under_cid = 15;</code>
+       * @return The bytes for uploadUnderCid.
+       */
+      public com.google.protobuf.ByteString
+          getUploadUnderCidBytes() {
+        java.lang.Object ref = uploadUnderCid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uploadUnderCid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 底层页发表时所属cid
+       * </pre>
+       *
+       * <code>string upload_under_cid = 15;</code>
+       * @param value The uploadUnderCid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUploadUnderCid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uploadUnderCid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 底层页发表时所属cid
+       * </pre>
+       *
+       * <code>string upload_under_cid = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUploadUnderCid() {
+        
+        uploadUnderCid_ = getDefaultInstance().getUploadUnderCid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 底层页发表时所属cid
+       * </pre>
+       *
+       * <code>string upload_under_cid = 15;</code>
+       * @param value The bytes for uploadUnderCid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUploadUnderCidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uploadUnderCid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uploadUnderLid_ = "";
+      /**
+       * <pre>
+       * 底层页发表时所属lid
+       * </pre>
+       *
+       * <code>string upload_under_lid = 16;</code>
+       * @return The uploadUnderLid.
+       */
+      public java.lang.String getUploadUnderLid() {
+        java.lang.Object ref = uploadUnderLid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uploadUnderLid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 底层页发表时所属lid
+       * </pre>
+       *
+       * <code>string upload_under_lid = 16;</code>
+       * @return The bytes for uploadUnderLid.
+       */
+      public com.google.protobuf.ByteString
+          getUploadUnderLidBytes() {
+        java.lang.Object ref = uploadUnderLid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uploadUnderLid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 底层页发表时所属lid
+       * </pre>
+       *
+       * <code>string upload_under_lid = 16;</code>
+       * @param value The uploadUnderLid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUploadUnderLid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uploadUnderLid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 底层页发表时所属lid
+       * </pre>
+       *
+       * <code>string upload_under_lid = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUploadUnderLid() {
+        
+        uploadUnderLid_ = getDefaultInstance().getUploadUnderLid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 底层页发表时所属lid
+       * </pre>
+       *
+       * <code>string upload_under_lid = 16;</code>
+       * @param value The bytes for uploadUnderLid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUploadUnderLidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uploadUnderLid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object feedType_ = "";
+      /**
+       * <pre>
+       * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+       * </pre>
+       *
+       * <code>string feed_type = 17;</code>
+       * @return The feedType.
+       */
+      public java.lang.String getFeedType() {
+        java.lang.Object ref = feedType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feedType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+       * </pre>
+       *
+       * <code>string feed_type = 17;</code>
+       * @return The bytes for feedType.
+       */
+      public com.google.protobuf.ByteString
+          getFeedTypeBytes() {
+        java.lang.Object ref = feedType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feedType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+       * </pre>
+       *
+       * <code>string feed_type = 17;</code>
+       * @param value The feedType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        feedType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+       * </pre>
+       *
+       * <code>string feed_type = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeedType() {
+        
+        feedType_ = getDefaultInstance().getFeedType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+       * </pre>
+       *
+       * <code>string feed_type = 17;</code>
+       * @param value The bytes for feedType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        feedType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList feedTypeList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureFeedTypeListIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          feedTypeList_ = new com.google.protobuf.LazyStringArrayList(feedTypeList_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <pre>
+       * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+       * </pre>
+       *
+       * <code>repeated string feed_type_list = 18;</code>
+       * @return A list containing the feedTypeList.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getFeedTypeListList() {
+        return feedTypeList_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+       * </pre>
+       *
+       * <code>repeated string feed_type_list = 18;</code>
+       * @return The count of feedTypeList.
+       */
+      public int getFeedTypeListCount() {
+        return feedTypeList_.size();
+      }
+      /**
+       * <pre>
+       * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+       * </pre>
+       *
+       * <code>repeated string feed_type_list = 18;</code>
+       * @param index The index of the element to return.
+       * @return The feedTypeList at the given index.
+       */
+      public java.lang.String getFeedTypeList(int index) {
+        return feedTypeList_.get(index);
+      }
+      /**
+       * <pre>
+       * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+       * </pre>
+       *
+       * <code>repeated string feed_type_list = 18;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the feedTypeList at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getFeedTypeListBytes(int index) {
+        return feedTypeList_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+       * </pre>
+       *
+       * <code>repeated string feed_type_list = 18;</code>
+       * @param index The index to set the value at.
+       * @param value The feedTypeList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedTypeList(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFeedTypeListIsMutable();
+        feedTypeList_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+       * </pre>
+       *
+       * <code>repeated string feed_type_list = 18;</code>
+       * @param value The feedTypeList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFeedTypeList(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFeedTypeListIsMutable();
+        feedTypeList_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+       * </pre>
+       *
+       * <code>repeated string feed_type_list = 18;</code>
+       * @param values The feedTypeList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFeedTypeList(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureFeedTypeListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, feedTypeList_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+       * </pre>
+       *
+       * <code>repeated string feed_type_list = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeedTypeList() {
+        feedTypeList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 帖子内容类型,1:文字,2:表情,3:图片,4:视频,5:话题,6:投票,7:链接,8:doki来源,9:语音
+       * </pre>
+       *
+       * <code>repeated string feed_type_list = 18;</code>
+       * @param value The bytes of the feedTypeList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFeedTypeListBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureFeedTypeListIsMutable();
+        feedTypeList_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object originalFeedid_ = "";
+      /**
+       * <pre>
+       * 转发帖引用原帖的feedid
+       * </pre>
+       *
+       * <code>string original_feedid = 19;</code>
+       * @return The originalFeedid.
+       */
+      public java.lang.String getOriginalFeedid() {
+        java.lang.Object ref = originalFeedid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          originalFeedid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 转发帖引用原帖的feedid
+       * </pre>
+       *
+       * <code>string original_feedid = 19;</code>
+       * @return The bytes for originalFeedid.
+       */
+      public com.google.protobuf.ByteString
+          getOriginalFeedidBytes() {
+        java.lang.Object ref = originalFeedid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          originalFeedid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 转发帖引用原帖的feedid
+       * </pre>
+       *
+       * <code>string original_feedid = 19;</code>
+       * @param value The originalFeedid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginalFeedid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        originalFeedid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 转发帖引用原帖的feedid
+       * </pre>
+       *
+       * <code>string original_feedid = 19;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOriginalFeedid() {
+        
+        originalFeedid_ = getDefaultInstance().getOriginalFeedid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 转发帖引用原帖的feedid
+       * </pre>
+       *
+       * <code>string original_feedid = 19;</code>
+       * @param value The bytes for originalFeedid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginalFeedidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        originalFeedid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object feedText_ = "";
+      /**
+       * <pre>
+       * 帖子正文
+       * </pre>
+       *
+       * <code>string feed_text = 20;</code>
+       * @return The feedText.
+       */
+      public java.lang.String getFeedText() {
+        java.lang.Object ref = feedText_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feedText_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 帖子正文
+       * </pre>
+       *
+       * <code>string feed_text = 20;</code>
+       * @return The bytes for feedText.
+       */
+      public com.google.protobuf.ByteString
+          getFeedTextBytes() {
+        java.lang.Object ref = feedText_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feedText_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 帖子正文
+       * </pre>
+       *
+       * <code>string feed_text = 20;</code>
+       * @param value The feedText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        feedText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 帖子正文
+       * </pre>
+       *
+       * <code>string feed_text = 20;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeedText() {
+        
+        feedText_ = getDefaultInstance().getFeedText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 帖子正文
+       * </pre>
+       *
+       * <code>string feed_text = 20;</code>
+       * @param value The bytes for feedText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        feedText_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vuid_ = "";
+      /**
+       * <pre>
+       * 发布账号
+       * </pre>
+       *
+       * <code>string vuid = 21;</code>
+       * @return The vuid.
+       */
+      public java.lang.String getVuid() {
+        java.lang.Object ref = vuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          vuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 发布账号
+       * </pre>
+       *
+       * <code>string vuid = 21;</code>
+       * @return The bytes for vuid.
+       */
+      public com.google.protobuf.ByteString
+          getVuidBytes() {
+        java.lang.Object ref = vuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 发布账号
+       * </pre>
+       *
+       * <code>string vuid = 21;</code>
+       * @param value The vuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        vuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 发布账号
+       * </pre>
+       *
+       * <code>string vuid = 21;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVuid() {
+        
+        vuid_ = getDefaultInstance().getVuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 发布账号
+       * </pre>
+       *
+       * <code>string vuid = 21;</code>
+       * @param value The bytes for vuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        vuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long sceneUploadTime_ ;
+      /**
+       * <pre>
+       * 发布时间,毫秒级时间戳（1614829859000）
+       * </pre>
+       *
+       * <code>uint64 scene_upload_time = 22;</code>
+       * @return The sceneUploadTime.
+       */
+      @java.lang.Override
+      public long getSceneUploadTime() {
+        return sceneUploadTime_;
+      }
+      /**
+       * <pre>
+       * 发布时间,毫秒级时间戳（1614829859000）
+       * </pre>
+       *
+       * <code>uint64 scene_upload_time = 22;</code>
+       * @param value The sceneUploadTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSceneUploadTime(long value) {
+        
+        sceneUploadTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 发布时间,毫秒级时间戳（1614829859000）
+       * </pre>
+       *
+       * <code>uint64 scene_upload_time = 22;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSceneUploadTime() {
+        
+        sceneUploadTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sceneIsNormalized_ = "";
+      /**
+       * <pre>
+       * 标准化状态
+       * </pre>
+       *
+       * <code>string scene_is_normalized = 23;</code>
+       * @return The sceneIsNormalized.
+       */
+      public java.lang.String getSceneIsNormalized() {
+        java.lang.Object ref = sceneIsNormalized_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sceneIsNormalized_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 标准化状态
+       * </pre>
+       *
+       * <code>string scene_is_normalized = 23;</code>
+       * @return The bytes for sceneIsNormalized.
+       */
+      public com.google.protobuf.ByteString
+          getSceneIsNormalizedBytes() {
+        java.lang.Object ref = sceneIsNormalized_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sceneIsNormalized_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 标准化状态
+       * </pre>
+       *
+       * <code>string scene_is_normalized = 23;</code>
+       * @param value The sceneIsNormalized to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSceneIsNormalized(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sceneIsNormalized_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 标准化状态
+       * </pre>
+       *
+       * <code>string scene_is_normalized = 23;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSceneIsNormalized() {
+        
+        sceneIsNormalized_ = getDefaultInstance().getSceneIsNormalized();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 标准化状态
+       * </pre>
+       *
+       * <code>string scene_is_normalized = 23;</code>
+       * @param value The bytes for sceneIsNormalized to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSceneIsNormalizedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sceneIsNormalized_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long sceneUpdataTime_ ;
+      /**
+       * <pre>
+       * 更新时间,ms
+       * </pre>
+       *
+       * <code>uint64 scene_updata_time = 24;</code>
+       * @return The sceneUpdataTime.
+       */
+      @java.lang.Override
+      public long getSceneUpdataTime() {
+        return sceneUpdataTime_;
+      }
+      /**
+       * <pre>
+       * 更新时间,ms
+       * </pre>
+       *
+       * <code>uint64 scene_updata_time = 24;</code>
+       * @param value The sceneUpdataTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSceneUpdataTime(long value) {
+        
+        sceneUpdataTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 更新时间,ms
+       * </pre>
+       *
+       * <code>uint64 scene_updata_time = 24;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSceneUpdataTime() {
+        
+        sceneUpdataTime_ = 0L;
         onChanged();
         return this;
       }
@@ -2489,7 +4544,7 @@ public final class PersonProto {
        * 帖子类型，图文/视频/纯文字/转发 等
        * </pre>
        *
-       * <code>string eid = 7;</code>
+       * <code>string eid = 25;</code>
        * @return The eid.
        */
       public java.lang.String getEid() {
@@ -2509,7 +4564,7 @@ public final class PersonProto {
        * 帖子类型，图文/视频/纯文字/转发 等
        * </pre>
        *
-       * <code>string eid = 7;</code>
+       * <code>string eid = 25;</code>
        * @return The bytes for eid.
        */
       public com.google.protobuf.ByteString
@@ -2530,7 +4585,7 @@ public final class PersonProto {
        * 帖子类型，图文/视频/纯文字/转发 等
        * </pre>
        *
-       * <code>string eid = 7;</code>
+       * <code>string eid = 25;</code>
        * @param value The eid to set.
        * @return This builder for chaining.
        */
@@ -2549,7 +4604,7 @@ public final class PersonProto {
        * 帖子类型，图文/视频/纯文字/转发 等
        * </pre>
        *
-       * <code>string eid = 7;</code>
+       * <code>string eid = 25;</code>
        * @return This builder for chaining.
        */
       public Builder clearEid() {
@@ -2563,7 +4618,7 @@ public final class PersonProto {
        * 帖子类型，图文/视频/纯文字/转发 等
        * </pre>
        *
-       * <code>string eid = 7;</code>
+       * <code>string eid = 25;</code>
        * @param value The bytes for eid to set.
        * @return This builder for chaining.
        */
@@ -2575,1198 +4630,6 @@ public final class PersonProto {
   checkByteStringIsUtf8(value);
         
         eid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object sceneVid_ = "";
-      /**
-       * <pre>
-       * 帖子内视频vid
-       * </pre>
-       *
-       * <code>string scene_vid = 8;</code>
-       * @return The sceneVid.
-       */
-      public java.lang.String getSceneVid() {
-        java.lang.Object ref = sceneVid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sceneVid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 帖子内视频vid
-       * </pre>
-       *
-       * <code>string scene_vid = 8;</code>
-       * @return The bytes for sceneVid.
-       */
-      public com.google.protobuf.ByteString
-          getSceneVidBytes() {
-        java.lang.Object ref = sceneVid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sceneVid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 帖子内视频vid
-       * </pre>
-       *
-       * <code>string scene_vid = 8;</code>
-       * @param value The sceneVid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSceneVid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        sceneVid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 帖子内视频vid
-       * </pre>
-       *
-       * <code>string scene_vid = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSceneVid() {
-        
-        sceneVid_ = getDefaultInstance().getSceneVid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 帖子内视频vid
-       * </pre>
-       *
-       * <code>string scene_vid = 8;</code>
-       * @param value The bytes for sceneVid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSceneVidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        sceneVid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object originalSceneStatus_ = "";
-      /**
-       * <pre>
-       * 转发帖引用原帖的状态
-       * </pre>
-       *
-       * <code>string original_scene_status = 9;</code>
-       * @return The originalSceneStatus.
-       */
-      public java.lang.String getOriginalSceneStatus() {
-        java.lang.Object ref = originalSceneStatus_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          originalSceneStatus_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 转发帖引用原帖的状态
-       * </pre>
-       *
-       * <code>string original_scene_status = 9;</code>
-       * @return The bytes for originalSceneStatus.
-       */
-      public com.google.protobuf.ByteString
-          getOriginalSceneStatusBytes() {
-        java.lang.Object ref = originalSceneStatus_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          originalSceneStatus_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 转发帖引用原帖的状态
-       * </pre>
-       *
-       * <code>string original_scene_status = 9;</code>
-       * @param value The originalSceneStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOriginalSceneStatus(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        originalSceneStatus_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 转发帖引用原帖的状态
-       * </pre>
-       *
-       * <code>string original_scene_status = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOriginalSceneStatus() {
-        
-        originalSceneStatus_ = getDefaultInstance().getOriginalSceneStatus();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 转发帖引用原帖的状态
-       * </pre>
-       *
-       * <code>string original_scene_status = 9;</code>
-       * @param value The bytes for originalSceneStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOriginalSceneStatusBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        originalSceneStatus_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object sceneContentType_ = "";
-      /**
-       * <pre>
-       * 帖子内容类型
-       * </pre>
-       *
-       * <code>string scene_content_type = 10;</code>
-       * @return The sceneContentType.
-       */
-      public java.lang.String getSceneContentType() {
-        java.lang.Object ref = sceneContentType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sceneContentType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 帖子内容类型
-       * </pre>
-       *
-       * <code>string scene_content_type = 10;</code>
-       * @return The bytes for sceneContentType.
-       */
-      public com.google.protobuf.ByteString
-          getSceneContentTypeBytes() {
-        java.lang.Object ref = sceneContentType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sceneContentType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 帖子内容类型
-       * </pre>
-       *
-       * <code>string scene_content_type = 10;</code>
-       * @param value The sceneContentType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSceneContentType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        sceneContentType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 帖子内容类型
-       * </pre>
-       *
-       * <code>string scene_content_type = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSceneContentType() {
-        
-        sceneContentType_ = getDefaultInstance().getSceneContentType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 帖子内容类型
-       * </pre>
-       *
-       * <code>string scene_content_type = 10;</code>
-       * @param value The bytes for sceneContentType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSceneContentTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        sceneContentType_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object sceneAttitude_ = "";
-      /**
-       * <pre>
-       * 态度
-       * </pre>
-       *
-       * <code>string scene_attitude = 11;</code>
-       * @return The sceneAttitude.
-       */
-      public java.lang.String getSceneAttitude() {
-        java.lang.Object ref = sceneAttitude_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sceneAttitude_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 态度
-       * </pre>
-       *
-       * <code>string scene_attitude = 11;</code>
-       * @return The bytes for sceneAttitude.
-       */
-      public com.google.protobuf.ByteString
-          getSceneAttitudeBytes() {
-        java.lang.Object ref = sceneAttitude_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sceneAttitude_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 态度
-       * </pre>
-       *
-       * <code>string scene_attitude = 11;</code>
-       * @param value The sceneAttitude to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSceneAttitude(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        sceneAttitude_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 态度
-       * </pre>
-       *
-       * <code>string scene_attitude = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSceneAttitude() {
-        
-        sceneAttitude_ = getDefaultInstance().getSceneAttitude();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 态度
-       * </pre>
-       *
-       * <code>string scene_attitude = 11;</code>
-       * @param value The bytes for sceneAttitude to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSceneAttitudeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        sceneAttitude_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object sceneTag_ = "";
-      /**
-       * <pre>
-       * 观点实体
-       * </pre>
-       *
-       * <code>string scene_tag = 12;</code>
-       * @return The sceneTag.
-       */
-      public java.lang.String getSceneTag() {
-        java.lang.Object ref = sceneTag_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sceneTag_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 观点实体
-       * </pre>
-       *
-       * <code>string scene_tag = 12;</code>
-       * @return The bytes for sceneTag.
-       */
-      public com.google.protobuf.ByteString
-          getSceneTagBytes() {
-        java.lang.Object ref = sceneTag_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sceneTag_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 观点实体
-       * </pre>
-       *
-       * <code>string scene_tag = 12;</code>
-       * @param value The sceneTag to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSceneTag(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        sceneTag_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 观点实体
-       * </pre>
-       *
-       * <code>string scene_tag = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSceneTag() {
-        
-        sceneTag_ = getDefaultInstance().getSceneTag();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 观点实体
-       * </pre>
-       *
-       * <code>string scene_tag = 12;</code>
-       * @param value The bytes for sceneTag to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSceneTagBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        sceneTag_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList sceneTagList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureSceneTagListIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          sceneTagList_ = new com.google.protobuf.LazyStringArrayList(sceneTagList_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-      /**
-       * <pre>
-       * 观点实体
-       * </pre>
-       *
-       * <code>repeated string scene_tag_list = 13;</code>
-       * @return A list containing the sceneTagList.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getSceneTagListList() {
-        return sceneTagList_.getUnmodifiableView();
-      }
-      /**
-       * <pre>
-       * 观点实体
-       * </pre>
-       *
-       * <code>repeated string scene_tag_list = 13;</code>
-       * @return The count of sceneTagList.
-       */
-      public int getSceneTagListCount() {
-        return sceneTagList_.size();
-      }
-      /**
-       * <pre>
-       * 观点实体
-       * </pre>
-       *
-       * <code>repeated string scene_tag_list = 13;</code>
-       * @param index The index of the element to return.
-       * @return The sceneTagList at the given index.
-       */
-      public java.lang.String getSceneTagList(int index) {
-        return sceneTagList_.get(index);
-      }
-      /**
-       * <pre>
-       * 观点实体
-       * </pre>
-       *
-       * <code>repeated string scene_tag_list = 13;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the sceneTagList at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getSceneTagListBytes(int index) {
-        return sceneTagList_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * 观点实体
-       * </pre>
-       *
-       * <code>repeated string scene_tag_list = 13;</code>
-       * @param index The index to set the value at.
-       * @param value The sceneTagList to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSceneTagList(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSceneTagListIsMutable();
-        sceneTagList_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 观点实体
-       * </pre>
-       *
-       * <code>repeated string scene_tag_list = 13;</code>
-       * @param value The sceneTagList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSceneTagList(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSceneTagListIsMutable();
-        sceneTagList_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 观点实体
-       * </pre>
-       *
-       * <code>repeated string scene_tag_list = 13;</code>
-       * @param values The sceneTagList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllSceneTagList(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureSceneTagListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, sceneTagList_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 观点实体
-       * </pre>
-       *
-       * <code>repeated string scene_tag_list = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSceneTagList() {
-        sceneTagList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 观点实体
-       * </pre>
-       *
-       * <code>repeated string scene_tag_list = 13;</code>
-       * @param value The bytes of the sceneTagList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSceneTagListBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureSceneTagListIsMutable();
-        sceneTagList_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object sceneImg_ = "";
-      /**
-       * <pre>
-       * 帖子内图片json信息(包含url、类型、长、宽)
-       * </pre>
-       *
-       * <code>string scene_img = 14;</code>
-       * @return The sceneImg.
-       */
-      public java.lang.String getSceneImg() {
-        java.lang.Object ref = sceneImg_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sceneImg_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 帖子内图片json信息(包含url、类型、长、宽)
-       * </pre>
-       *
-       * <code>string scene_img = 14;</code>
-       * @return The bytes for sceneImg.
-       */
-      public com.google.protobuf.ByteString
-          getSceneImgBytes() {
-        java.lang.Object ref = sceneImg_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sceneImg_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 帖子内图片json信息(包含url、类型、长、宽)
-       * </pre>
-       *
-       * <code>string scene_img = 14;</code>
-       * @param value The sceneImg to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSceneImg(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        sceneImg_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 帖子内图片json信息(包含url、类型、长、宽)
-       * </pre>
-       *
-       * <code>string scene_img = 14;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSceneImg() {
-        
-        sceneImg_ = getDefaultInstance().getSceneImg();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 帖子内图片json信息(包含url、类型、长、宽)
-       * </pre>
-       *
-       * <code>string scene_img = 14;</code>
-       * @param value The bytes for sceneImg to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSceneImgBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        sceneImg_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object userType_ = "";
-      /**
-       * <pre>
-       * 帐号类型，0=普通用户;1=UGC;2=明星;3`=机构号;4=媒体号;5=企业号;6=政府号;7=大IP号;8=影视公司号;9=公益机构;10=社区权威号;11=社区优质号;12=社区达人号;13=社区外团号
-       * </pre>
-       *
-       * <code>string user_type = 15;</code>
-       * @return The userType.
-       */
-      public java.lang.String getUserType() {
-        java.lang.Object ref = userType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          userType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 帐号类型，0=普通用户;1=UGC;2=明星;3`=机构号;4=媒体号;5=企业号;6=政府号;7=大IP号;8=影视公司号;9=公益机构;10=社区权威号;11=社区优质号;12=社区达人号;13=社区外团号
-       * </pre>
-       *
-       * <code>string user_type = 15;</code>
-       * @return The bytes for userType.
-       */
-      public com.google.protobuf.ByteString
-          getUserTypeBytes() {
-        java.lang.Object ref = userType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 帐号类型，0=普通用户;1=UGC;2=明星;3`=机构号;4=媒体号;5=企业号;6=政府号;7=大IP号;8=影视公司号;9=公益机构;10=社区权威号;11=社区优质号;12=社区达人号;13=社区外团号
-       * </pre>
-       *
-       * <code>string user_type = 15;</code>
-       * @param value The userType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        userType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 帐号类型，0=普通用户;1=UGC;2=明星;3`=机构号;4=媒体号;5=企业号;6=政府号;7=大IP号;8=影视公司号;9=公益机构;10=社区权威号;11=社区优质号;12=社区达人号;13=社区外团号
-       * </pre>
-       *
-       * <code>string user_type = 15;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUserType() {
-        
-        userType_ = getDefaultInstance().getUserType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 帐号类型，0=普通用户;1=UGC;2=明星;3`=机构号;4=媒体号;5=企业号;6=政府号;7=大IP号;8=影视公司号;9=公益机构;10=社区权威号;11=社区优质号;12=社区达人号;13=社区外团号
-       * </pre>
-       *
-       * <code>string user_type = 15;</code>
-       * @param value The bytes for userType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        userType_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object correlationJson_ = "";
-      /**
-       * <pre>
-       * 帖子与话题&amp;doki相关性
-       * </pre>
-       *
-       * <code>string correlation_json = 16;</code>
-       * @return The correlationJson.
-       */
-      public java.lang.String getCorrelationJson() {
-        java.lang.Object ref = correlationJson_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          correlationJson_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 帖子与话题&amp;doki相关性
-       * </pre>
-       *
-       * <code>string correlation_json = 16;</code>
-       * @return The bytes for correlationJson.
-       */
-      public com.google.protobuf.ByteString
-          getCorrelationJsonBytes() {
-        java.lang.Object ref = correlationJson_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          correlationJson_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 帖子与话题&amp;doki相关性
-       * </pre>
-       *
-       * <code>string correlation_json = 16;</code>
-       * @param value The correlationJson to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCorrelationJson(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        correlationJson_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 帖子与话题&amp;doki相关性
-       * </pre>
-       *
-       * <code>string correlation_json = 16;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCorrelationJson() {
-        
-        correlationJson_ = getDefaultInstance().getCorrelationJson();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 帖子与话题&amp;doki相关性
-       * </pre>
-       *
-       * <code>string correlation_json = 16;</code>
-       * @param value The bytes for correlationJson to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCorrelationJsonBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        correlationJson_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object ipDokiCorrelationJson_ = "";
-      /**
-       * <pre>
-       * 帖子与ipdoki相关性
-       * </pre>
-       *
-       * <code>string ip_doki_correlation_json = 17;</code>
-       * @return The ipDokiCorrelationJson.
-       */
-      public java.lang.String getIpDokiCorrelationJson() {
-        java.lang.Object ref = ipDokiCorrelationJson_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          ipDokiCorrelationJson_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 帖子与ipdoki相关性
-       * </pre>
-       *
-       * <code>string ip_doki_correlation_json = 17;</code>
-       * @return The bytes for ipDokiCorrelationJson.
-       */
-      public com.google.protobuf.ByteString
-          getIpDokiCorrelationJsonBytes() {
-        java.lang.Object ref = ipDokiCorrelationJson_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          ipDokiCorrelationJson_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 帖子与ipdoki相关性
-       * </pre>
-       *
-       * <code>string ip_doki_correlation_json = 17;</code>
-       * @param value The ipDokiCorrelationJson to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIpDokiCorrelationJson(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        ipDokiCorrelationJson_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 帖子与ipdoki相关性
-       * </pre>
-       *
-       * <code>string ip_doki_correlation_json = 17;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIpDokiCorrelationJson() {
-        
-        ipDokiCorrelationJson_ = getDefaultInstance().getIpDokiCorrelationJson();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 帖子与ipdoki相关性
-       * </pre>
-       *
-       * <code>string ip_doki_correlation_json = 17;</code>
-       * @param value The bytes for ipDokiCorrelationJson to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIpDokiCorrelationJsonBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        ipDokiCorrelationJson_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long likeNum_ ;
-      /**
-       * <pre>
-       * 点赞数
-       * </pre>
-       *
-       * <code>uint64 like_num = 18;</code>
-       * @return The likeNum.
-       */
-      @java.lang.Override
-      public long getLikeNum() {
-        return likeNum_;
-      }
-      /**
-       * <pre>
-       * 点赞数
-       * </pre>
-       *
-       * <code>uint64 like_num = 18;</code>
-       * @param value The likeNum to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLikeNum(long value) {
-        
-        likeNum_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 点赞数
-       * </pre>
-       *
-       * <code>uint64 like_num = 18;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLikeNum() {
-        
-        likeNum_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long commentNum_ ;
-      /**
-       * <pre>
-       * 评论数
-       * </pre>
-       *
-       * <code>uint64 comment_num = 19;</code>
-       * @return The commentNum.
-       */
-      @java.lang.Override
-      public long getCommentNum() {
-        return commentNum_;
-      }
-      /**
-       * <pre>
-       * 评论数
-       * </pre>
-       *
-       * <code>uint64 comment_num = 19;</code>
-       * @param value The commentNum to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCommentNum(long value) {
-        
-        commentNum_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 评论数
-       * </pre>
-       *
-       * <code>uint64 comment_num = 19;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCommentNum() {
-        
-        commentNum_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object isHighQuality_ = "";
-      /**
-       * <pre>
-       * 是否优质帖，1：人工优质；2：机器优质；3：否
-       * </pre>
-       *
-       * <code>string is_high_quality = 20;</code>
-       * @return The isHighQuality.
-       */
-      public java.lang.String getIsHighQuality() {
-        java.lang.Object ref = isHighQuality_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          isHighQuality_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 是否优质帖，1：人工优质；2：机器优质；3：否
-       * </pre>
-       *
-       * <code>string is_high_quality = 20;</code>
-       * @return The bytes for isHighQuality.
-       */
-      public com.google.protobuf.ByteString
-          getIsHighQualityBytes() {
-        java.lang.Object ref = isHighQuality_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          isHighQuality_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 是否优质帖，1：人工优质；2：机器优质；3：否
-       * </pre>
-       *
-       * <code>string is_high_quality = 20;</code>
-       * @param value The isHighQuality to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsHighQuality(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        isHighQuality_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 是否优质帖，1：人工优质；2：机器优质；3：否
-       * </pre>
-       *
-       * <code>string is_high_quality = 20;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsHighQuality() {
-        
-        isHighQuality_ = getDefaultInstance().getIsHighQuality();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 是否优质帖，1：人工优质；2：机器优质；3：否
-       * </pre>
-       *
-       * <code>string is_high_quality = 20;</code>
-       * @param value The bytes for isHighQuality to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsHighQualityBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        isHighQuality_ = value;
         onChanged();
         return this;
       }
@@ -3837,18 +4700,21 @@ public final class PersonProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014person.proto\"\234\003\n\006Person\022\n\n\002id\030\001 \001(\005\022\014\n" +
+      "\n\014person.proto\"\215\004\n\006Person\022\n\n\002id\030\001 \001(\005\022\014\n" +
       "\004name\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022\017\n\007address\030\004 " +
-      "\003(\t\022\013\n\003xxx\030\005 \003(\t\022\013\n\003age\030\006 \001(\004\022\013\n\003eid\030\007 \001" +
-      "(\t\022\021\n\tscene_vid\030\010 \001(\t\022\035\n\025original_scene_" +
-      "status\030\t \001(\t\022\032\n\022scene_content_type\030\n \001(\t" +
-      "\022\026\n\016scene_attitude\030\013 \001(\t\022\021\n\tscene_tag\030\014 " +
-      "\001(\t\022\026\n\016scene_tag_list\030\r \003(\t\022\021\n\tscene_img" +
-      "\030\016 \001(\t\022\021\n\tuser_type\030\017 \001(\t\022\030\n\020correlation" +
-      "_json\030\020 \001(\t\022 \n\030ip_doki_correlation_json\030" +
-      "\021 \001(\t\022\020\n\010like_num\030\022 \001(\004\022\023\n\013comment_num\030\023" +
-      " \001(\004\022\027\n\017is_high_quality\030\024 \001(\tB(\n\031me.feng" +
-      "fshao.protobuf.pb3B\013PersonProtob\006proto3"
+      "\003(\t\022\013\n\003xxx\030\005 \003(\t\022\024\n\014dokiids_list\030\006 \003(\t\022\020" +
+      "\n\010topicids\030\007 \001(\t\022\025\n\rtopicids_list\030\010 \003(\t\022" +
+      "\026\n\016push_timestamp\030\t \001(\004\022\024\n\014scene_status\030" +
+      "\n \001(\t\022\024\n\014data_version\030\013 \001(\004\022\023\n\013modify_ti" +
+      "me\030\014 \001(\004\022\021\n\ttimestamp\030\r \001(\004\022\030\n\020upload_un" +
+      "der_vid\030\016 \001(\t\022\030\n\020upload_under_cid\030\017 \001(\t\022" +
+      "\030\n\020upload_under_lid\030\020 \001(\t\022\021\n\tfeed_type\030\021" +
+      " \001(\t\022\026\n\016feed_type_list\030\022 \003(\t\022\027\n\017original" +
+      "_feedid\030\023 \001(\t\022\021\n\tfeed_text\030\024 \001(\t\022\014\n\004vuid" +
+      "\030\025 \001(\t\022\031\n\021scene_upload_time\030\026 \001(\004\022\033\n\023sce" +
+      "ne_is_normalized\030\027 \001(\t\022\031\n\021scene_updata_t" +
+      "ime\030\030 \001(\004\022\013\n\003eid\030\031 \001(\tB(\n\031me.fengfshao.p" +
+      "rotobuf.pb3B\013PersonProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3859,7 +4725,7 @@ public final class PersonProto {
     internal_static_Person_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Person_descriptor,
-        new java.lang.String[] { "Id", "Name", "Email", "Address", "Xxx", "Age", "Eid", "SceneVid", "OriginalSceneStatus", "SceneContentType", "SceneAttitude", "SceneTag", "SceneTagList", "SceneImg", "UserType", "CorrelationJson", "IpDokiCorrelationJson", "LikeNum", "CommentNum", "IsHighQuality", });
+        new java.lang.String[] { "Id", "Name", "Email", "Address", "Xxx", "DokiidsList", "Topicids", "TopicidsList", "PushTimestamp", "SceneStatus", "DataVersion", "ModifyTime", "Timestamp", "UploadUnderVid", "UploadUnderCid", "UploadUnderLid", "FeedType", "FeedTypeList", "OriginalFeedid", "FeedText", "Vuid", "SceneUploadTime", "SceneIsNormalized", "SceneUpdataTime", "Eid", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

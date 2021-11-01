@@ -73,6 +73,8 @@ public class Demo {
                 .addField("optional", "int32", "id", 1)     // required int32 id = 1
                 .addField("optional", "string", "name", 2)  // required string name = 2
                 .addField("optional", "string", "email", 3) // optional string email = 3
+                .addField("repeated", "string", "address", 4) // optional string email = 3
+                .addField("repeated", "string", "xxx", 5) // optional string email = 3
                 .build();
 
         schemaBuilder.addMessageDefinition(msgDef);
@@ -85,6 +87,7 @@ public class Demo {
         DynamicMessage msg = msgBuilder
                 .setField(msgDesc.findFieldByName("id"), 1)
                 .setField(msgDesc.findFieldByName("email"), "jihite@jihite.com")
+                .setField(msgDesc.findFieldByName("address"), Arrays.asList("aaa","bbb"))
                 .build();
 
         byte[] bytes1 = msg.toByteArray();
@@ -92,6 +95,7 @@ public class Demo {
         PersonProto.Person.Builder builder = PersonProto.Person.newBuilder();
         builder.setId(1);
         builder.setEmail("jihite@jihite.com");
+        builder.addAllAddress(Arrays.asList("aaa", "bbb"));
         byte[] bytes2 = builder.build().toByteArray();
 
         InputStream protoInputStream = Thread.currentThread().getContextClassLoader()
@@ -101,6 +105,8 @@ public class Demo {
         Map<String, Object> fieldValues = new HashMap<>();
         fieldValues.put("id", 1);
         fieldValues.put("email", "jihite@jihite.com");
+        fieldValues.put("address", Arrays.asList("aaa","bbb"));
+
 
         DynamicMessage msg3= DynamicProtoBuilder.buildMessage("Person", fieldValues);
         byte[] bytes3 = msg3.toByteArray();

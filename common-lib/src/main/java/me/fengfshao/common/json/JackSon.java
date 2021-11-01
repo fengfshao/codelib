@@ -3,6 +3,7 @@ package me.fengfshao.common.json;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -82,6 +83,8 @@ public class JackSon {
     }
 
     public static void main(String[] args) throws Exception {
-        HighApiParseWithOutTypeReference();
+        //HighApiParseWithOutTypeReference();
+        String s= String.join(",", Collections.emptyList());
+        System.out.println("["+s+"]");
     }
 }

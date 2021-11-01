@@ -1,0 +1,13 @@
+new_field:
+  - add_prefix(original_scene_status,'xyz_') as new_f1
+  - length(original_scene_status) as new_f2
+  - get_json_object(kv,'$.mid') as new_f3,unix_time() as new_f4
+
+new_field_mapping:
+  "new_f1": add_prefix(original_scene_status,'xyz_')
+  "new_f2": length(original_scene_status)
+
+common_filter:
+  scene_status: scene_status <> '0'
+  normalize: length(original_scene_status) > 5
+  correlated: get_json_object(ip_correlation,'$.correlation')='1134'

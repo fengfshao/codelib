@@ -90,7 +90,7 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>3.12.4</version>
+            <version>3.17.0</version>
         </dependency>
 
         <dependency>
@@ -106,6 +106,24 @@
             <version>2.2.27</version>
         </dependency>
 
+        <!--codec-->
+        <dependency>
+            <artifactId>commons-codec</artifactId>
+            <groupId>commons-codec</groupId>
+            <version>1.10</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.jsqlparser</groupId>
+            <artifactId>jsqlparser</artifactId>
+            <version>0.9</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>junit</artifactId>
+                    <groupId>junit</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
 
     <build>
