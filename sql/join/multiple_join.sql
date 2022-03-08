@@ -1,3 +1,4 @@
+--多张表进行全连接--
 select coalesce(t_comment_sum.vid,t_like_sum.vid,t_follow_sum.vid,t_collect_sum.vid,t_share_sum.vid) as vid,
 like_cnt_fe,comment_cnt_fe,follow_cnt_fe,collect_cnt_fe,share_cnt_fe
 from
