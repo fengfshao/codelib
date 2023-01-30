@@ -60,7 +60,7 @@ public class LoadJar {
 
         System.out.println("=================");
         //Runtime.getRuntime().
-        /*Reflections reflections = new Reflections("com.tencent.trs.itemflow.extension", urlClassLoader);
+        /*Reflections reflections = new Reflections("com.xxx.trs.itemflow.extension", urlClassLoader);
         Set<Class<?>> clazzs = reflections.getTypesAnnotatedWith(Udf.class);
         clazzs.forEach((c) -> {
             try {

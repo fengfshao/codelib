@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <artifactId>video-rcmd-pool</artifactId>
+    <groupId>com.xxx.xxx</groupId>
+    <version>1.0.0</version>
+    <modelVersion>4.0.0</modelVersion>
+
+    <build>
+        <plugins>
+            <!--java 编译器-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <!--scala mvn编译器-->
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>3.4.6</version>
+                <executions>
+                    <execution>
+                        <id>compile-scala</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>test-compile-scala</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <jvmArgs>-Xss8M</jvmArgs> <!--防止编译时递归栈oom-->
+                    <scalaVersion>${scala.version}</scalaVersion>
+                </configuration>
+            </plugin>
+
+            <!--编译时默认先java，再编译scala，如果scala模块里调用了java代码，则会出class not found之类的错误，需特殊设置下-->
+            <!--https://www.5axxw.com/questions/content/t87yor-->
+
+            <plugin>
+                <artifactId>exec-maven-plugin</artifactId>
+                <groupId>org.codehaus.mojo</groupId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <id>fetchPb</id>
+                        <phase>process-sources</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>${basedir}/scripts/fetch_pb.py</executable>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--mvn 单测及report配置-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <reportsDirectory>${devops.build.release}/report</reportsDirectory>
+                    <reportFormat>xml</reportFormat>
+                </configuration>
+            </plugin>
+
+            <!--mvn jacoco单元测试覆盖率分析-->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.4</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report-aggregate</id>
+                        <goals>
+                            <goal>report-aggregate</goal>
+                        </goals>
+                        <phase>test</phase>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--配置clean使得能够清理其他目录或文件-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <!--mvn clean时清除构建产物-->
+                    <execution>
+                        <id>clean</id>
+                        <configuration>
+                            <filesets>
+                                <fileset>
+                                    <directory>${devops.build.release}</directory>
+                                </fileset>
+                            </filesets>
+                        </configuration>
+                        <inherited>false</inherited>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                    <!--删除不必要的根目录下target中的覆盖率文件-->
+                    <execution>
+                        <id>clean-target</id>
+                        <inherited>false</inherited>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--编译时的代码检查工具，在大公司一般会直接做成IDE插件-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.1.2</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.puppycrawl.tools</groupId>
+                        <artifactId>checkstyle</artifactId>
+                        <version>8.33</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <configLocation>/xxx_checks.xml</configLocation>
+                    <consoleOutput>true</consoleOutput>
+                </configuration>
+            </plugin>
+
+            <!--给编译打包出的文件增加时间戳后缀-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.10</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>timestamp-property</goal>
+                        </goals>
+                        <configuration>
+                            <name>build.time</name>
+                            <pattern>yyMMddHHmm</pattern>
+                            <locale>zh_CN</locale>
+                            <timeZone>Asia/Shanghai</timeZone>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--proto编译-->
+            <plugin>
+                <artifactId>protobuf-maven-plugin</artifactId>
+                <configuration>
+                    <!--Setting to "true" disables version check between 'protoc' and the protobuf library used by module-->
+                    <cleanOutputFolder>false</cleanOutputFolder>
+                    <ignoreVersions>true</ignoreVersions>
+                    <inputDirectories>
+                        <inputDirectory>
+                            src/main/resources/protobuf3
+                        </inputDirectory>
+                    </inputDirectories>
+                    <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                    <protocCommand>/usr/local/bin/protoc3</protocCommand>
+                </configuration>
+                <executions>
+                    <!--主动执行protobuf:run进行编译，编译代码时不自动编译proto-->
+                    <!--<execution>
+                        <phase>process-sources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>-->
+                </executions>
+                <groupId>com.github.igor-petruk.protobuf</groupId>
+                <version>0.6.5</version>
+            </plugin>
+
+            <!--shade打包-->
+            <plugin>
+                <artifactId>maven-shade-plugin</artifactId>
+                <configuration>
+                    <filters>
+                        <filter>
+                            <artifact>*:*</artifact>
+                            <excludes>
+                                <exclude>META-INF/*.SF</exclude>
+                                <exclude>META-INF/*.DSA</exclude>
+                                <exclude>META-INF/*.RSA</exclude>
+                            </excludes>
+                        </filter>
+                    </filters>
+                    <outputFile>${devops.build.release}/jars/${shade.jar.name}</outputFile>
+                    <shadedArtifactAttached>false</shadedArtifactAttached>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <phase>package</phase>
+                    </execution>
+                </executions>
+                <groupId>org.apache.maven.plugins</groupId>
+                <version>3.2.0</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- 对依赖版本进行统一管理，在多模块较复杂项目中比较有用 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.xxx.xxx</groupId>
+                <artifactId>rcmd-commons</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.xxx.xxx</groupId>
+                <artifactId>common-config</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- 如果有自己的mvn镜像，配置mvn发布地址 -->
+    <!-- 发布时执行mvn deploy即可 -->
+    <distributionManagement>
+        <repository>
+            <id>thirdparty</id>
+            <name>thirdparty</name>
+            <url>https://mirrors.cloud.xxx.com/repository/maven/thirdparty</url>
+        </repository>
+        <snapshotRepository>
+            <id>thirdparty-snapshots</id>
+            <name>thirdparty-snapshots</name>
+            <url>https://mirrors.cloud.xxx.com/repository/maven/thirdparty-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>

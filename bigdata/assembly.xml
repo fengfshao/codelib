@@ -1,0 +1,36 @@
+<assembly>
+    <id>bin</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <dependencySets>
+        <dependencySet>
+            <excludes>
+                <exclude>${groupId}:${artifactId}</exclude>
+            </excludes>
+            <outputDirectory>lib</outputDirectory>
+        </dependencySet>
+        <dependencySet>
+            <includes>
+                <include>${groupId}:${artifactId}</include>
+            </includes>
+            <outputDirectory/>
+        </dependencySet>
+    </dependencySets>
+
+    <fileSets>
+        <fileSet>
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>*.yaml</include>
+            </includes>
+            <outputDirectory/>
+        </fileSet>
+    </fileSets>
+    <files>
+        <file>
+            <source>run.sh</source>
+            <outputDirectory/>
+        </file>
+    </files>
+</assembly>

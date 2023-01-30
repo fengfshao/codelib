@@ -26,7 +26,7 @@ start () {
 
   echo "starting agent of version $version ..."
   mkdir -p "$LOG_DIR"
-  cmd="java $JVM_ARGS -cp $BASE_DIR/:$BASE_DIR/lib/* -DpulsarAgentHome=$BASE_DIR -DagentVersion=$version com.tencent.pcg.video.FSJavaAgent"
+  cmd="java $JVM_ARGS -cp $BASE_DIR/:$BASE_DIR/lib/* -DpulsarAgentHome=$BASE_DIR -DagentVersion=$version com.xxx.pcg.video.FSJavaAgent"
 
   $cmd 2>&1 >"$LOG_DIR"/stdout.log &
   if [ "$?" -eq "0" ]; then
@@ -86,3 +86,4 @@ main() {
 }
 
 main "$@"
+  cmd="java $JVM_ARGS -cp $BASE_DIR/:$BASE_DIR/lib/* -DpulsarAgentHome=$BASE_DIR -DagentVersion=$version com.tencsssssssssssssss
