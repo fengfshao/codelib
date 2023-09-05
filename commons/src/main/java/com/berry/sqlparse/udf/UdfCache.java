@@ -1,6 +1,6 @@
 package com.berry.sqlparse.udf;
 
-import com.berry.common.reflection.annotations.Udf;
+import com.berry.commons.reflection.annotations.Udf;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;

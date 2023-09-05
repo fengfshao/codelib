@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -38,7 +39,6 @@ import org.apache.hadoop.util.LineReader;
 public class FileBlockDemo {
 
     public static void main(String[] args) throws Exception {
-
         //localDebug(args);
         String inputPath = args[0];
         Path hadoopPath = new Path(inputPath);

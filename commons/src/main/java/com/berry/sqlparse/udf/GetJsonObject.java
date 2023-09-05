@@ -19,7 +19,7 @@ package com.berry.sqlparse.udf;
  */
 
 
-import com.berry.common.reflection.annotations.Udf;
+import com.berry.commons.reflection.annotations.Udf;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;

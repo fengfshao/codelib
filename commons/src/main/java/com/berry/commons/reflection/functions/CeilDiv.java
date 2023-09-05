@@ -1,12 +1,13 @@
-package com.berry.sqlparse.udf;
+package com.berry.commons.reflection.functions;
 
 import com.berry.commons.reflection.annotations.Udf;
+import com.berry.commons.reflection.ScalarFunction;
 import java.util.List;
 
 /**
- * Author: tanpp
- * Date: 2021/10/28 16:45
- * Description:
+ * 整除函数，f.eval(7,3)=2
+ *
+ * @author tanpp
  */
 @Udf(name = "ceil_div")
 public class CeilDiv implements ScalarFunction {
@@ -16,10 +17,5 @@ public class CeilDiv implements ScalarFunction {
         String num1 = String.valueOf(params.get(0));
         String num2 = String.valueOf(params.get(1));
         return -Math.floorDiv(-Integer.parseInt(num1), Integer.parseInt(num2));
-    }
-
-    @Override
-    public String getName() {
-        return ScalarFunction.super.getName();
     }
 }
