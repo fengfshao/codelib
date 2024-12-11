@@ -86,4 +86,3 @@ main() {
 }
 
 main "$@"
-  cmd="java $JVM_ARGS -cp $BASE_DIR/:$BASE_DIR/lib/* -DpulsarAgentHome=$BASE_DIR -DagentVersion=$version com.tencsssssssssssssss

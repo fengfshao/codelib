@@ -13,7 +13,7 @@ import org.reflections.Reflections;
 public class UdfCache {
     public static final Map<String,ScalarFunction> cache=new ConcurrentHashMap<>();
     static {
-        Reflections reflections = new Reflections("me.fengfshao.sqlparse.udf");
+        Reflections reflections = new Reflections("com.fengfshao.sqlparse.udf");
         Set<Class<?>> clazzs = reflections.getTypesAnnotatedWith(Udf.class);
         clazzs.forEach(c->{
             try {

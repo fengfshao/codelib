@@ -186,11 +186,11 @@
                     <!--Setting to "true" disables version check between 'protoc' and the protobuf library used by module-->
                     <ignoreVersions>false</ignoreVersions>
                     <!-- .proto文件所在目录 -->
-                    <!--<inputDirectories>
+                    <inputDirectories>
                         <inputDirectory>
-                            ${project.basedir}/${project.root.relativePath}/common-config/resource/protobuf3
+                            ${project.basedir}/src/main/resources/protobuf3
                         </inputDirectory>
-                    </inputDirectories>-->
+                    </inputDirectories>
                     <!-- 编译依赖的proto文件寻找路径-->
                     <!--<includeDirectories>
 

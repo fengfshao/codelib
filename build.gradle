@@ -1,0 +1,81 @@
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'scala'
+
+
+    ext {
+        scalaBinaryVersion = '2.12'
+        sparkVersion = '3.1.2'
+        flinkVersion = '1.15.6'
+    }
+
+    repositories {
+        mavenLocal()
+        maven { url "https://maven.aliyun.com/repository/public" }
+        maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+        mavenCentral()
+    }
+
+    sourceSets {
+        main {
+            scala {
+                srcDirs = ['src/main/java', 'src/main/scala']
+            }
+            java {
+                srcDirs = []
+            }
+            resources {
+                srcDirs = ["src/main/resources/"]
+            }
+        }
+        test {
+            scala {
+                srcDirs = ['src/test/java', 'src/test/scala']
+            }
+            java {
+                srcDirs = []
+            }
+            resources {
+                srcDirs = ["src/test/resources/"]
+            }
+        }
+    }
+
+    dependencies {
+        compileOnly "org.scala-lang:scala-library:2.12.10"
+        compileOnly "org.scala-lang:scala-compiler:2.12.10"
+        compileOnly "org.scala-lang:scala-reflect:2.12.10"
+        compileOnly 'org.projectlombok:lombok:1.18.20'
+        implementation 'org.apache.commons:commons-lang3:3.11'
+        testImplementation "junit:junit:4.12"
+        testImplementation "org.scalatest:scalatest_2.12:3.2.2"
+        testImplementation "org.scalatestplus:junit-4-12_2.12:3.2.2.0"
+    }
+}
+
+project(":commons") {
+
+    dependencies {
+        implementation 'org.yaml:snakeyaml:1.26'
+        implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.8'
+        implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.8.10'
+        implementation 'com.fasterxml.jackson.module:jackson-module-scala_2.11:2.9.4'
+        implementation 'org.reflections:reflections:0.9.11'
+        implementation 'redis.clients:jedis:3.6.0'
+        implementation 'com.google.protobuf:protobuf-java:3.17.0'
+        implementation 'com.github.os72:protobuf-dynamic:1.0.1'
+        implementation 'io.protostuff:protostuff-parser:2.2.27'
+        implementation 'commons-codec:commons-codec:1.10'
+        implementation 'com.github.jsqlparser:jsqlparser:0.9'
+    }
+}
+
+project(":bigdata") {
+    dependencies {
+        implementation 'org.apache.hadoop:hadoop-client:2.6.5'
+        implementation "org.apache.spark:spark-sql_${scalaBinaryVersion}:${sparkVersion}"
+        implementation "org.apache.spark:spark-hive_2.12:${sparkVersion}"
+        implementation "org.apache.flink:flink-streaming-java:${flinkVersion}"
+        runtimeOnly "org.apache.flink:flink-runtime-web:${flinkVersion}"
+    }
+}
