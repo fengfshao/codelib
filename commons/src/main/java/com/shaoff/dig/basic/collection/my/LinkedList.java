@@ -1,14 +1,9 @@
 package com.shaoff.dig.basic.collection.my;
 
-import java.util.Collection;
-import java.util.ConcurrentModificationException;
-import java.util.Deque;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.NoSuchElementException;
+import java.util.*;
 
-public class LinkedList<T> implements List<T>, Deque<T> {
+public class LinkedList<T> extends AbstractSequentialList<T>
+        implements List<T>, Deque<T> {
 
     private transient int size;
     private transient int modCount;
@@ -16,8 +11,7 @@ public class LinkedList<T> implements List<T>, Deque<T> {
     private transient Node<T> last;
 
     private static class Node<T> {
-
-        public Node(T ele, Node<T> p, Node<T> n) {
+        public Node(Node<T> p, T ele, Node<T> n) {
             data = ele;
             prev = p;
             next = n;
@@ -40,169 +34,66 @@ public class LinkedList<T> implements List<T>, Deque<T> {
     }
 
     @Override
+    public boolean add(T t) {
+        linkLast(t);
+        return true;
+    }
+
+    @Override
     public boolean contains(Object o) {
         return indexOf(o) >= 0;
     }
 
-    @Override
-    public void addFirst(T t) {
-
-    }
-
-    @Override
-    public void addLast(T t) {
-
-    }
-
-    @Override
-    public boolean offerFirst(T t) {
-        return false;
-    }
-
-    @Override
-    public boolean offerLast(T t) {
-        return false;
-    }
-
-    @Override
-    public T removeFirst() {
-        return null;
-    }
-
-    @Override
-    public T removeLast() {
-        return null;
-    }
-
-    @Override
-    public T pollFirst() {
-        return null;
-    }
-
-    @Override
-    public T pollLast() {
-        return null;
-    }
-
-    @Override
-    public T getFirst() {
-        return null;
-    }
-
-    @Override
-    public T getLast() {
-        return null;
-    }
-
-    @Override
-    public T peekFirst() {
-        return null;
-    }
-
-    @Override
-    public T peekLast() {
-        return null;
-    }
-
-    @Override
-    public boolean removeFirstOccurrence(Object o) {
-        return false;
-    }
-
-    @Override
-    public boolean removeLastOccurrence(Object o) {
-        return false;
-    }
-
-    public void add(T ele) {
-        linkLast(ele);
-    }
-
-    @Override
     public boolean remove(Object o) {
-        return false;
-    }
-
-    @Override
-    public boolean containsAll(Collection<?> c) {
-        return false;
-    }
-
-    @Override
-    public boolean addAll(Collection<? extends T> c) {
-        return false;
-    }
-
-    @Override
-    public boolean addAll(int index, Collection<? extends T> c) {
-        return false;
-    }
-
-    @Override
-    public boolean removeAll(Collection<?> c) {
-        return false;
-    }
-
-    @Override
-    public boolean retainAll(Collection<?> c) {
+        for (Node<T> x = first; x != null; x = x.next) {
+            if (Objects.equals(o, x.data)) {
+                unlink(x);
+                return true;
+            }
+        }
         return false;
     }
 
     @Override
     public boolean offer(T t) {
-        return false;
+        return add(t);
     }
 
     @Override
     public T remove() {
-        return null;
+        return removeFirst();
     }
 
     @Override
     public T poll() {
-        return null;
+        return pollFirst();
     }
 
     @Override
     public T element() {
-        return null;
+        return getFirst();
     }
 
     @Override
     public T peek() {
-        return null;
+        return peekFirst();
     }
 
     @Override
     public void push(T t) {
-
+        addFirst(t);
     }
 
     @Override
     public T pop() {
-        return null;
-    }
-
-    public T get(int pos) {
-        return getNode(pos).data;
-    }
-
-    public T set(int pos, T newVal) {
-        Node<T> old = getNode(pos);
-        T oldVal = old.data;
-        old.data = newVal;
-        return oldVal;
-    }
-
-    public T remove(int pos) {
-        return remove(getNode(pos));
+        return removeFirst();
     }
 
     @Override
     public int indexOf(Object o) {
         int index = 0;
         for (Node<T> node = first; node != null; node = node.next) {
-            if ((o == null && node.data == null) || o != null && o.equals(node.data)) {
+            if (Objects.equals(o, node.data)) {
                 return index;
             }
             index += 1;
@@ -212,34 +103,31 @@ public class LinkedList<T> implements List<T>, Deque<T> {
 
     @Override
     public int lastIndexOf(Object o) {
-        return 0;
+        int index = -1;
+        int res = index;
+        for (Node<T> node = first; node != null; node = node.next) {
+            if (Objects.equals(o, node.data)) {
+                res = index;
+            }
+            index += 1;
+        }
+        return res;
     }
 
-    @Override
-    public ListIterator<T> listIterator() {
-        return null;
-    }
-
-    @Override
-    public ListIterator<T> listIterator(int index) {
-        return null;
-    }
-
-    @Override
-    public List<T> subList(int fromIndex, int toIndex) {
-        return null;
-    }
-
-    private void addBefore(Node<T> p, T ele) {
-        Node<T> newNode = new Node<>(ele, p.prev, p);
-        newNode.prev.next = newNode;
-        p.prev = newNode;
-        theSize++;
-        modCount++;
+    private void linkFirst(T ele) {
+        Node<T> newNode = new Node<>(null, ele, first);
+        if (first == null) {
+            first = last = newNode;
+        } else {
+            first.prev = newNode;
+            first = newNode;
+        }
+        size += 1;
+        modCount += 1;
     }
 
     private void linkLast(T ele) {
-        Node<T> newNode = new Node<>(ele, last, null);
+        Node<T> newNode = new Node<>(last, ele, null);
         if (last == null) {
             last = first = newNode;
         } else {
@@ -250,35 +138,27 @@ public class LinkedList<T> implements List<T>, Deque<T> {
         modCount += 1;
     }
 
-    private T remove(Node<T> p) {
-        p.next.prev = p.prev;
-        p.prev.next = p.next;
-        theSize--;
-        modCount--;
-        return p.data;
-    }
-
-    private Node<T> getNode(int pos) {
-        return getNode(pos, 0, size() - 1);
-    }
-
-    private Node<T> getNode(int pos, int p, int r) {
-        Node<T> node;
-        if (pos < r || pos > r) {
-            throw new IndexOutOfBoundsException();
-        }
-        if (pos < size() >> 2) {
-            node = bm.next;
-            for (int i = 0; i < pos; i++) {
-                node = node.next;
-            }
+    private T unlink(Node<T> x) {
+        final T ele = x.data;
+        if (x.prev == null) {
+            first = x.next;
+            first.prev = null;
+        } else if (x.next == null) {
+            last = x.prev;
+            last.next = null;
         } else {
-            node = em;
-            for (int i = size(); i > pos; i--) {
-                node = node.prev;
-            }
+            x.prev.next = x.next;
+            x.next.prev = x.prev;
+            // help gc
+            x.prev = null;
+            x.next = null;
         }
-        return node;
+
+        // help gc
+        x.data = null;
+        size--;
+        modCount++;
+        return ele;
     }
 
     public void clear() {
@@ -288,18 +168,103 @@ public class LinkedList<T> implements List<T>, Deque<T> {
     }
 
     @Override
-    public Iterator<T> iterator() {
-        return new LinkedListIterator();
+    public void addFirst(T t) {
+        linkFirst(t);
     }
 
     @Override
-    public Object[] toArray() {
-        return new Object[0];
+    public void addLast(T t) {
+        linkLast(t);
     }
 
     @Override
-    public <T1> T1[] toArray(T1[] a) {
-        return null;
+    public boolean offerFirst(T t) {
+        addFirst(t);
+        return true;
+    }
+
+    @Override
+    public boolean offerLast(T t) {
+        addLast(t);
+        return true;
+    }
+
+    @Override
+    public T removeFirst() {
+        if (first == null) {
+            throw new NoSuchElementException();
+        }
+        return unlink(first);
+    }
+
+    @Override
+    public T removeLast() {
+        if (last == null) {
+            throw new NoSuchElementException();
+        }
+        return unlink(last);
+    }
+
+    @Override
+    public T pollFirst() {
+        if (first == null) {
+            return null;
+        } else {
+            return unlink(first);
+        }
+    }
+
+    @Override
+    public T pollLast() {
+        if (last == null) {
+            return null;
+        } else {
+            return unlink(last);
+        }
+    }
+
+    @Override
+    public T getFirst() {
+        if (first == null) {
+            throw new NoSuchElementException();
+        }
+        return first.data;
+    }
+
+    @Override
+    public T getLast() {
+        if (last == null) {
+            throw new NoSuchElementException();
+        }
+        return last.data;
+    }
+
+    @Override
+    public T peekFirst() {
+        if (first == null) {
+            return null;
+        } else {
+            return first.data;
+        }
+    }
+
+    @Override
+    public T peekLast() {
+        if (last == null) {
+            return null;
+        } else {
+            return last.data;
+        }
+    }
+
+    @Override
+    public boolean removeFirstOccurrence(Object o) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean removeLastOccurrence(Object o) {
+        throw new UnsupportedOperationException();
     }
 
     @Override
@@ -307,43 +272,74 @@ public class LinkedList<T> implements List<T>, Deque<T> {
         return null;
     }
 
+    @Override
+    public ListIterator<T> listIterator(int index) {
+        return null;
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new LinkedListIterator();
+    }
+
     private class LinkedListIterator implements Iterator<T> {
 
-        private Node<T> cur = first.next;
         private int expectedModCount = modCount;
-        private boolean okToRemove = false;
+        private int lastRet = -1;
+        private int cursor = 0;
+        private Node<T> cur = first;
 
         @Override
         public boolean hasNext() {
-            return cur != em;
+            return cursor != size;
         }
 
         @Override
         public T next() {
-            if (modCount != expectedModCount) {
-                throw new ConcurrentModificationException();
-            }
-            if (!hasNext()) {
+            checkForComodification();
+            if (cursor >= size) {
                 throw new NoSuchElementException();
             }
-
-            T nextItem = cur.data;
+            lastRet = cursor;
+            T next = cur.data;
+            cursor += 1;
             cur = cur.next;
-            okToRemove = true;
-            return nextItem;
+            return next;
         }
 
         @Override
         public void remove() {
+            if (lastRet < 0) {
+                throw new IllegalStateException();
+            }
+            checkForComodification();
+            unlink(cur.prev);
+            expectedModCount=modCount;
+            cursor=lastRet;
+            lastRet=-1;
+        }
+
+        private void checkForComodification() {
             if (modCount != expectedModCount) {
                 throw new ConcurrentModificationException();
             }
-            if (!okToRemove) {
-                throw new IllegalStateException();
-            }
-            LinkedList.this.remove(cur.prev);
-            expectedModCount++;
-            okToRemove = false;
         }
+    }
+
+    public static void main(String[] args) {
+        List<String> list = new LinkedList<>();
+        list.add("ab");
+        list.add("bc");
+        list.add("");
+        list.add("11");
+        Iterator<String> it = list.iterator();
+        while (it.hasNext()){
+            String v=it.next();
+            System.out.println(";"+v);
+            if(v.isEmpty()){
+                it.remove();
+            }
+        }
+        System.out.println(String.join(",",list));
     }
 }
