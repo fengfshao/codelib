@@ -9,4 +9,4 @@ def get_hotp_token(secret, intervals_no):
     return "%06d" %h
 
 if __name__ == '__main__':
-  print get_hotp_token('QY6WY74TTVLAE2KW',int(time.time())//30)
+  print(get_hotp_token('QY6WY74TTVLAE2KW',int(time.time())//30))

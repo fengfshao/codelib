@@ -24,14 +24,14 @@ class Something{
  * 对于重写，发生在继承关系中，是指调用非虚方法时，根据对象动态类型来确定调用方法，具体来说，对于发生重写的方法调用，其产生的字面量相同，
  * 调用者的动态类型未知，故在类加载时的解析阶段无法确定其直接引用，需要等到方法执行前的动态分派阶段根据实际类型从下往上查找方法，转换为直接引用。
  */
-class Base{
+class Base1{
     public int a=1;
     private Something b;
     private int c=-10;
-    public Base(){
+    public Base1(){
         b=new Something();
     }
-    protected Base(int c){
+    protected Base1(int c){
         this.c=c;
     }
 
@@ -42,8 +42,8 @@ class Base{
         return c;
     }
 }
-public class Child extends Base{
-    public Child() {
+ class Child1 extends Base1{
+    public Child1() {
 //        super(2);
     }
 
@@ -56,15 +56,15 @@ public class Child extends Base{
 //    }
     }
     public static void main(String[] args) {
-        Child c=new Child();
-        Base base=c;
-        if(base instanceof Base){
+        Child1 c=new Child1();
+        Base1 base=c;
+        if(base instanceof Base1){
             System.out.println("base");
         }
-        if(base instanceof Child){
+        if(base instanceof Child1){
             System.out.println("child");
         }
-        Child d= (Child) base;
+        Child1 d= (Child1) base;
         System.out.println(c.getPrivateInt());
     }
 
