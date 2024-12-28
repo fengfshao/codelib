@@ -121,6 +121,11 @@
             <version>1.10</version>
         </dependency>
 
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.1</version>
+        </dependency>
         <!-- java sql解析 -->
         <dependency>
             <groupId>com.github.jsqlparser</groupId>

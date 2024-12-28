@@ -1,0 +1,13 @@
+全局原子int ctl 即表示线程池状态,还表示了worker的数量,其中ctl前三位表示状态,后29位存储容量
+COUNT_BITS=29
+CAPACITY=1<<29-1 即(29个1)
+取状态     ctl&(~CAPATCITY)
+取COUNT   ctl&CAPATICY
+拼接ctl   STATE|COUNT
+ps:取数中的几位,和一个掩码进行与操作,掩码,目标位1,非目标位0
+   拼接两个数各自的有效位,或操作进行连接即可
+
+
+## 线程底层实现
+1. https://medium.com/@unmeshvjoshi/how-java-thread-maps-to-os-thread-e280a9fb2e06
+2. https://blog.jamesdbloom.com/JVMInternals.html#jvm_system_threads
