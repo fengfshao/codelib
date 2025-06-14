@@ -4,3 +4,5 @@ target/
 .DS_Store
 build_release/
 .temp/
+build/
+.gradle/

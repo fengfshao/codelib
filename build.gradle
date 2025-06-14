@@ -6,7 +6,7 @@ allprojects {
     ext {
         scalaBinaryVersion = '2.12'
         sparkVersion = '3.1.2'
-        flinkVersion = '1.15.6'
+        flinkVersion = '1.13.6'
     }
 
     repositories {
@@ -67,6 +67,7 @@ project(":commons") {
         implementation 'io.protostuff:protostuff-parser:2.2.27'
         implementation 'commons-codec:commons-codec:1.10'
         implementation 'com.github.jsqlparser:jsqlparser:0.9'
+        implementation 'cglib:cglib:3.1'
     }
 }
 
@@ -75,7 +76,7 @@ project(":bigdata") {
         implementation 'org.apache.hadoop:hadoop-client:2.6.5'
         implementation "org.apache.spark:spark-sql_${scalaBinaryVersion}:${sparkVersion}"
         implementation "org.apache.spark:spark-hive_2.12:${sparkVersion}"
-        implementation "org.apache.flink:flink-streaming-java:${flinkVersion}"
+        implementation "org.apache.flink:flink-streaming-java_2.12:${flinkVersion}"
         runtimeOnly "org.apache.flink:flink-runtime-web:${flinkVersion}"
     }
 }
