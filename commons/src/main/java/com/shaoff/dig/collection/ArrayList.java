@@ -142,7 +142,7 @@ public class ArrayList<T> extends AbstractCollection<T> implements Iterable<T>, 
     public boolean removeIdx(int idx) {
         rangeCheck(idx);
         modCount += 1;
-        System.arraycopy(elementData, idx + 1, elementData, idx, size - 1 - idx);
+        System.arraycopy(elementData, idx + 1, elementData, idx, size -idx -1);
 /*
         for (int j = idx; j < size - 1; j++) {
             elementData[j] = elementData[j + 1];

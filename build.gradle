@@ -77,6 +77,6 @@ project(":bigdata") {
         implementation "org.apache.spark:spark-sql_${scalaBinaryVersion}:${sparkVersion}"
         implementation "org.apache.spark:spark-hive_2.12:${sparkVersion}"
         implementation "org.apache.flink:flink-streaming-java_2.12:${flinkVersion}"
-        runtimeOnly "org.apache.flink:flink-runtime-web:${flinkVersion}"
+        //runtimeOnly "org.apache.flink:flink-runtime-web_2.12:${flinkVersion}"
     }
 }
